@@ -1,0 +1,458 @@
+ID,BiGG ID,Enzyme,Reaction equation,Gene name
+ACALD,ACALD,acetaldehyde dehydrogenase (acetylating),(1)acald[c]+(1)coa[c]+(1)nad[c]<--->(1)accoa[c]+(1)h[c]+(1)nadh[c],mhpF or adhE
+ACALDtpp_ex,composed of ACALDtex and ACALDtpp,composed of acetaldehyde transport via diffusion (extracellular to periplasm) and acetaldehyde reversible transport (periplasm),(1)acald[e]<--->(1)acald[c],NA
+ACKr,ACKr,acetate kinase,(1)ac[c]+(1)atp[c]<--->(1)actp[c]+(1)adp[c],ackA or purT or tdcD
+ACONTa,ACONTa,"aconitase (half-reaction A, Citrate hydro-lyase)",(1)cit[c]<--->(1)acon-C[c]+(1)h2o[c],acnB or acnA
+ACONTb,ACONTb,"aconitase (half-reaction B, Isocitrate hydro-lyase)",(1)acon-C[c]+(1)h2o[c]<--->(1)icit[c],acnB or acnA
+ACt2rpp_ex_H,composed of ACt2rpp and ACtex and Htex,composed of acetate reversible transport via proton symport (periplasm) and Acetate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(1)ac[e]+(1)h[e]<--->(1)ac[c]+(1)h[c],NA
+ADK1,ADK1,adenylate kinase,(1)amp[c]+(1)atp[c]<--->(2)adp[c],adk
+AKGDH,AKGDH,2-Oxogluterate dehydrogenase,(1)akg[c]+(1)coa[c]+(1)nad[c]--->(1)co2[c]+(1)nadh[c]+(1)succoa[c],sucB and lpd and sucA
+AKGt2rpp_ex,composed of AKGt2rpp and AKGtex and Htex,composed of 2-oxoglutarate reversible transport via symport (periplasm) and alpha-ketoglutarate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(1)akg[e]+(1)h[e]<--->(1)akg[c]+(1)h[c],NA
+ALCD2x,ALCD2x,alcohol dehydrogenase (ethanol),(1)etoh[c]+(1)nad[c]<--->(1)acald[c]+(1)h[c]+(1)nadh[c],adhE or adhP
+ATPM,ATPM,ATP maintenance requirement,(1)atp[c]+(1)h2o[c]--->(1)adp[c]+(1)h[c]+(1)pi[c],
+ATPS4rpp,ATPS4rpp,ATP synthase (four protons for one ATP) (periplasm),(1)adp[c]+(4)h[e]+(1)pi[c]<--->(1)atp[c]+(1)h2o[c]+(3)h[c],(atpI and (atpC and atpG and atpH and atpA and atpD) and (atpB and atpF and atpE)) or ((atpC and atpG and atpH and atpA and atpD) and (atpB and atpF and atpE))
+CO2tpp_ex,composed of CO2tex and CO2tpp,composed of CO2 transport via diffusion (periplasm and extracellular to periplasm),(1)co2[e]<--->(1)co2[c],NA
+CS,CS,citrate synthase,(1)accoa[c]+(1)h2o[c]+(1)oaa[c]--->(1)cit[c]+(1)coa[c]+(1)h[c],gltA
+CYTBD2pp_H,composed of CYTBD2pp and Htex,composed of cytochrome oxidase bd (menaquinol-8: 2 protons) (periplasm) and proton transport via diffusion (extracellular to periplasm),(2)h[c]+(0.5)o2[c]+(1)q8h2[c]--->(1)h2o[c]+(2)h[e]+(1)q8[c],NA
+D-LACt2pp_ex_H,composed of D-LACt2pp and D-LACtex and Htex,composed of D-lactate transport via diffusion (periplasm and extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(1)h[e]+(1)lac-D[e]<--->(1)h[c]+(1)lac-D[c],NA
+ENO,ENO,enolase,(1)2pg[c]<--->(1)h2o[c]+(1)pep[c],eno
+ETOHt2rpp_ex_H,composed of ETOHt2rpp and ETOHtex and Htex,composed of ethanol reversible transport via proton symport (periplasm) and ethanol transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(1)etoh[e]+(1)h[e]<--->(1)etoh[c]+(1)h[c],NA
+EX_ac(e),EX_ac(e),Acetate exchange,(1)ac[e]<--->,NA
+EX_acald(e),EX_acald(e),Acetaldehyde exchange,(1)acald[e]<--->,NA
+EX_akg(e),EX_akg(e),2-Oxoglutarate exchange,(1)akg[e]<--->,NA
+EX_co2(e),EX_co2(e),CO2 exchange,(1)co2[e]<--->,NA
+EX_etoh(e),EX_etoh(e),Ethanol exchange,(1)etoh[e]<--->,NA
+EX_fum(e),EX_fum(e),Fumarate exchange,(1)fum[e]<--->,NA
+EX_glc(e),EX_glc(e),D-Glucose exchange,(1)glc-D[e]<--->,NA
+EX_gln_L(e),EX_gln_L(e),L-Glutamine exchange,(1)gln-L[e]<--->,NA
+EX_glu_L(e),EX_glu_L(e),L-Glutamate exchange,(1)glu-L[e]<--->,NA
+EX_h(e),EX_h(e),H2 exchange,(1)h[e]<--->,NA
+EX_h2o(e),EX_h2o(e),H2O exchange,(1)h2o[e]<--->,NA
+EX_lac_D(e),EX_lac_D(e),D-lactate exchange,(1)lac-D[e]<--->,NA
+EX_mal_L(e),EX_mal_L(e),L-Malate exchange,(1)mal-L[e]<--->,NA
+EX_nh4(e),EX_nh4(e),Ammonia exchange,(1)nh4[e]<--->,NA
+EX_o2(e),EX_o2(e),O2 exchange,(1)o2[e]<--->,NA
+EX_pi(e),EX_pi(e),Phosphate exchange,(1)pi[e]<--->,NA
+EX_pyr(e),EX_pyr(e),Pyruvate exchange,(1)pyr[e]<--->,NA
+EX_succ(e),EX_succ(e),Succinate exchange,(1)succ[e]<--->,NA
+FBA,FBA,fructose-bisphosphate aldolase,(1)fdp[c]<--->(1)dhap[c]+(1)g3p[c],fbaA or fbaB
+FBP,FBP,fructose-bisphosphatase,(1)fdp[c]+(1)h2o[c]--->(1)f6p[c]+(1)pi[c],fbp or glpX or yggF or yidA
+FRD2,FRD2,fumarate reductase,(1)fum[c]+(1)q8h2[c]--->(1)q8[c]+(1)succ[c],frdC and frdD and frdB and frdA
+FUM,FUM,fumarase,(1)fum[c]+(1)h2o[c]<--->(1)mal-L[c],fumA or fumB or fumC
+FUMt2_2pp_ex_H,composed of FUMt2_2pp and FUMtex and Htex,composed of Fumarate transport via diffusion (extracellular to periplasm) and Fumarate transport via proton symport (2 H) (periplasm) and proton transport via diffusion (extracellular to periplasm),(1)fum[e]+(2)h[e]--->(1)fum[c]+(2)h[c],NA
+G6PDH2r,G6PDH2r,glucose 6-phosphate dehydrogenase,(1)g6p[c]+(1)nadp[c]<--->(1)6pgl[c]+(1)h[c]+(1)nadph[c],zwf
+GAPD,GAPD,glyceraldehyde-3-phosphate dehydrogenase,(1)g3p[c]+(1)nad[c]+(1)pi[c]<--->(1)13dpg[c]+(1)h[c]+(1)nadh[c],gapA
+GLCptspp_ex_exi,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],NA
+GLNS,GLNS,glutamine synthetase,(1)atp[c]+(1)glu-L[c]+(1)nh4[c]--->(1)adp[c]+(1)gln-L[c]+(1)h[c]+(1)pi[c],glnA
+GLNabcpp_ex,composed of GLNabcpp and GLNtex,composed of L-glutamine transport via ABC system (periplasm) and L-glutamine transport via diffusion (extracellular to periplasm),(1)atp[c]+(1)gln-L[e]+(1)h2o[c]--->(1)adp[c]+(1)gln-L[c]+(1)h[c]+(1)pi[c],NA
+GLUDy,GLUDy,glutamate dehydrogenase (NADP),(1)glu-L[c]+(1)h2o[c]+(1)nadp[c]<--->(1)akg[c]+(1)h[c]+(1)nadph[c]+(1)nh4[c],gdhA or (gltD and gltB)
+GLUN,GLUN,glutaminase,(1)gln-L[c]+(1)h2o[c]--->(1)glu-L[c]+(1)nh4[c],glsA or glsB
+GLUSy,GLUSy,glutamate synthase (NADPH),(1)akg[c]+(1)gln-L[c]+(1)h[c]+(1)nadph[c]--->(2)glu-L[c]+(1)nadp[c],gltD and gltB
+GLUt2rpp_ex_H,composed of GLUt2rpp and GLUtex and Htex,"composed of L-glutamate transport via proton symport, reversible (periplasm) and L-glutamate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm)",(1)glu-L[e]+(1)h[e]<--->(1)glu-L[c]+(1)h[c],NA
+GND,GND,phosphogluconate dehydrogenase,(1)6pgc[c]+(1)nadp[c]--->(1)co2[c]+(1)nadph[c]+(1)ru5p-D[c],gnd
+H2Otpp_ex,composed of H2Otex and H2Otpp,composed of H2O transport via diffusion (extracellular to periplasm) and H2O transport via diffusion (periplasm),(1)h2o[e]<--->(1)h2o[c],NA
+ICDHyr,ICDHyr,isocitrate dehydrogenase (NADP),(1)icit[c]+(1)nadp[c]<--->(1)akg[c]+(1)co2[c]+(1)nadph[c],icd
+ICL,ICL,Isocitrate lyase,(1)icit[c]--->(1)glx[c]+(1)succ[c],aceA
+LDH_D,LDH_D,D-lactate dehydrogenase,(1)lac-D[c]+(1)nad[c]<--->(1)h[c]+(1)nadh[c]+(1)pyr[c],ldhA
+MALS,MALS,malate synthase,(1)accoa[c]+(1)glx[c]+(1)h2o[c]--->(1)coa[c]+(1)h[c]+(1)mal-L[c],aceB or glcB
+MALt2_2pp_ex_H,MALt2_2pp,composed of Malate transport via proton symport (2 H) (periplasm) and Malate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(2)h[e]+(1)mal-L[e]--->(2)h[c]+(1)mal-L[c],NA
+MDH,MDH,malate synthase,(1)mal-L[c]+(1)nad[c]<--->(1)h[c]+(1)nadh[c]+(1)oaa[c],mdh
+ME1,ME1,malic enzyme (NAD),(1)mal-L[c]+(1)nad[c]--->(1)co2[c]+(1)nadh[c]+(1)pyr[c],maeA
+ME2,ME2,malic enzyme (NADP),(1)mal-L[c]+(1)nadp[c]--->(1)co2[c]+(1)nadph[c]+(1)pyr[c],maeB
+NADH16pp_H,composed of NADH16pp and Htex,composed of NADH dehydrogenase (ubiquinone-8 & 3 protons) (periplasm) and proton transport via diffusion (extracellular to periplasm),(4)h[c]+(1)nadh[c]+(1)q8[c]--->(3)h[e]+(1)nad[c]+(1)q8h2[c],NA
+NADTRHD,NADTRHD,NAD transhydrogenase,(1)nad[c]+(1)nadph[c]--->(1)nadh[c]+(1)nadp[c],sthA
+NH4tpp_ex,composed of NH4tex and NH4tpp,composed of ammonia transport via diffusion (extracellular to periplasm) and ammonia reversible transport (periplasm),(1)nh4[e]<--->(1)nh4[c],NA
+O2tpp_ex,composed of O2tpp and O2tex,composed of oxygen transport via diffusion (extracellular to periplasm) and o2 transport via diffusion (periplasm),(1)o2[e]<--->(1)o2[c],NA
+PDH,PDH,pyruvate dehydrogenase,(1)coa[c]+(1)nad[c]+(1)pyr[c]--->(1)accoa[c]+(1)co2[c]+(1)nadh[c],aceF and lpd and aceE
+PFKA,PFK,phosphofructokinase,(1)atp[c]+(1)f6p[c]--->(1)adp[c]+(1)fdp[c]+(1)h[c],pfkA or pfkB
+PGI,PGI,glucose-6-phosphate isomerase,(1)g6p[c]<--->(1)f6p[c],pgi
+PGK,PGK,phosphoglycerate kinase,(1)3pg[c]+(1)atp[c]<--->(1)13dpg[c]+(1)adp[c],pgk
+PGL,PGL,6-phosphogluconolactonase,(1)6pgl[c]+(1)h2o[c]--->(1)6pgc[c]+(1)h[c],pgl
+PGM,PGM,phosphoglycerate mutase,(1)2pg[c]<--->(1)3pg[c],gpmA or gpmM
+PIt2rpp_ex_H,composed of PIt2rpp and Pitex and Htex,composed of phosphate reversible transport via symport (periplasm) and phosphate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(1)h[e]+(1)pi[e]<--->(1)h[c]+(1)pi[c],NA
+PPC,PPC,phosphoenolpyruvate carboxylase,(1)co2[c]+(1)h2o[c]+(1)pep[c]--->(1)h[c]+(1)oaa[c]+(1)pi[c],ppc
+PPCK,PPCK,phosphoenolpyruvate carboxykinase,(1)atp[c]+(1)oaa[c]--->(1)adp[c]+(1)co2[c]+(1)pep[c],pck
+PPS,PPS,phosphoenolpyruvate synthase,(1)atp[c]+(1)h2o[c]+(1)pyr[c]--->(1)amp[c]+(2)h[c]+(1)pep[c]+(1)pi[c],ppsA
+PTAr,PTAr,phosphotransacetylase,(1)accoa[c]+(1)pi[c]<--->(1)actp[c]+(1)coa[c],pta or eutD
+PYKF,PYK,pyruvate kinase,(1)adp[c]+(1)h[c]+(1)pep[c]--->(1)atp[c]+(1)pyr[c],pykA or pykF
+PYRt2rpp_ex_H,composed of PYRt2rpp and PYRtex and Htex,composed of pyruvate reversible transport via proton symport (periplasm) and pyruvate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(1)h[e]+(1)pyr[e]<--->(1)h[c]+(1)pyr[c],NA
+RPE,RPE,ribulose 5-phosphate 3-epimerase,(1)ru5p-D[c]<--->(1)xu5p-D[c],rpe
+RPI,RPI,ribose-5-phosphate isomerase,(1)r5p[c]<--->(1)ru5p-D[c],rpiA or rpiB
+SUCCt2_2pp_ex_H,composed of SUCCt2_2pp and SUCCtex and Htex,composed of succinate transport via proton symport (2 H) (periplasm) and succinate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(2)h[e]+(1)succ[e]--->(2)h[c]+(1)succ[c],NA
+SUCCt3pp_ex_H,composed of SUCCt3pp and SUCCtex and Htex,composed of succinate transport out via proton antiport (periplasm) and succinate transport via diffusion (extracellular to periplasm) and proton transport via diffusion (extracellular to periplasm),(1)h[e]+(1)succ[c]--->(1)h[c]+(1)succ[e],NA
+SUCDi,SUCDi,succinate dehydrogenase (irreversible),(1)q8[c]+(1)succ[c]--->(1)fum[c]+(1)q8h2[c],sdhC and sdhD and sdhA and sdhB
+SUCOAS,SUCOAS,succinyl-CoA synthetase (ADP-forming),(1)atp[c]+(1)coa[c]+(1)succ[c]<--->(1)adp[c]+(1)pi[c]+(1)succoa[c],sucD and sucC
+TALA,TALA,transaldolase,(1)g3p[c]+(1)s7p[c]<--->(1)e4p[c]+(1)f6p[c],talB or talA
+TKT1,TKT1,transketolase,(1)r5p[c]+(1)xu5p-D[c]<--->(1)g3p[c]+(1)s7p[c],tktA or tktB
+TKT2,TKT2,transketolase,(1)e4p[c]+(1)xu5p-D[c]<--->(1)f6p[c]+(1)g3p[c],tktA or tktB
+TPI,TPI,triose-phosphate isomerase,(1)dhap[c]<--->(1)g3p[c],tpiA
+PYKA,PYK,pyruvate kinase,[c] : adp + h + pep --> atp + pyr,pykA or pykF
+EDA,EDA,2-dehydro-3-deoxy-phosphogluconate aldolase,[c] : 2ddg6p --> g3p + pyr,eda
+EDD,EDD,6-phosphogluconate dehydratase,[c] : 6pgc --> 2ddg6p + h2o,edd
+FBP_Glpx,FBP,fructose-bisphosphatase,(1)fdp[c]+(1)h2o[c]--->(1)f6p[c]+(1)pi[c],fbp or glpX or yggF or yidA
+PGL_spon,PGL,6-phosphogluconolactonase,(1)6pgl[c]+(1)h2o[c]--->(1)6pgc[c]+(1)h[c],pgl
+MDH2,MDH2,Malate dehydrogenase (ubiquinone 8 as acceptor),[c] : mal-L + q8 --> oaa + q8h2,mqo
+EX_E4P(e),EX_E4P(e),NA,e4p [c] -->,NA
+EX_S7P(e),EX_S7P(e),NA,s7p [c] -->,NA
+EX_RU5P(e),EX_RU5P(e),NA,ru5p [c] -->,NA
+EX_OAA(e),EX_OAA(e),NA,oaa [c] -->,NA
+EX_SUCCOA(e),EX_SUCCOA(e),NA,succoa [c] -->,NA
+EX_ACCOA(e),EX_ACCOA(e),NA,accoa [c] -->,NA
+DDPA,DDPA,3-deoxy-D-arabino-heptulosonate 7-phosphate synthetase,[c] : e4p + h2o + pep --> 2dda7p + pi,aroF or aroG or aroH
+PGMT,PGMT,phosphoglucomutase,[c] : g1p <==> g6p,yqaB or pgm or ycjU
+GLGC,GLGC,glucose-1-phosphate adenylyltransferase,[c] : atp + g1p + h --> adpglc + ppi,glgC
+R5PP,R5PP,ribose 5-phosphate phosphatase,[c] : h2o + r5p --> pi + rib-D,ybiV or yqaB or umpH or yfbT or yidA
+EX_DHAP(e),EX_DHAP(e),NA,dhap [c] -->,NA
+EX_3PG(e),EX_3PG(e),NA,3pg [c] -->,NA
+EX_F6P(e),EX_F6P(e),NA,f6p [c] -->,NA
+EX_G3P(e),EX_G3P(e),NA,--> gap [c],NA
+EX_PEP(e),EX_PEP(e),NA,pep [c] -->,NA
+ACS,ACS,acetyl-CoA synthetase,[c] : ac + atp + coa --> accoa + amp + ppi,acs
+EX_2DDA7P(e),EX_2DDA7P(e),NA,(1)2dda7p_e=,NA
+EX_ADPGLC(e),EX_ADPGLC(e),NA,(1)adpglc_e=,NA
+ADPGLCtpp_ex,ADPGLCtpp_ex,NA,(1)adpglc_e=(1)adpglc_c,NA
+2DDA7Ptpp_ex,2DDA7Ptpp_ex,NA,(1)2dda7p_e=(1)2dda7p_c,NA
+E4Ptpp_ex,E4Ptpp_ex,NA,(1)e4p_e=(1)e4p_c,NA
+S7Ptpp_ex,S7Ptpp_ex,NA,(1)s7p_e=(1)s7p_c,NA
+RU5Ptpp_ex,RU5Ptpp_ex,NA,(1)ru5p_e=(1)ru5p_c,NA
+OAAtpp_ex,OAAtpp_ex,NA,(1)oaa_e=(1)oaa_c,NA
+SUCCOAtpp_ex,SUCCOAtpp_ex,NA,(1)succoa_e=(1)succoa_c,NA
+ACCOAtpp_ex,ACCOAtpp_ex,NA,(1)accoa_e=(1)accoa_c,NA
+DHAPtpp_ex,DHAPtpp_ex,NA,(1)dhap_e=(1)dhap_c,NA
+3PGtpp_ex,3PGtpp_ex,NA,(1)3pg_e=(1)3pg_c,NA
+F6Ptpp_ex,F6Ptpp_ex,NA,(1)f6p_e=(1)f6p_c,NA
+G3Ptpp_ex,G3Ptpp_ex,NA,(1)g3p_e=(1)g3p_c,NA
+PYRpp_ex,PYRpp_ex,NA,(1)pyr_e=(1)pyr_c,NA
+PEPtpp_ex,PEPtpp_ex,NA,(1)pep_e=(1)pep_c,NA
+RIB_Dtpp_ex,RIB_Dtpp_ex,NA,(1)rib_d_e=(1)rib_d_c,NA
+EX_RIB_D(e),EX_RIB_D(e),NA,(1)rib_d_e-->,NA
+PPA,PPA,inorganic diphosphatase,(1)h2o_c+(1)ppi_c=(2)h_c+(2)pi_c,umpG or ppx or ppa
+GLCS1,GLCS1,glycogen synthase (ADPGlc),(1)adpglc_c=(1)adp_c+(1)glycogen+(1)h_c,glgA
+GLU5K,GLU5K,glutamate 5-kinase,[c] : atp + glu-L --> adp + glu5p,proB
+G5SD,G5SD,glutamate-5-semialdehyde dehydrogenase,[c] : glu5p + h + nadph --> glu5sa + nadp + pi,proA
+P5CR,P5CR,pyrroline-5-carboxylate reductase,[c] : 1pyr5c + (2) h + nadph --> nadp + pro-L,proC
+ACGS,ACGS,N-acetylglutamate synthase,[c] : accoa + glu-L --> acglu + coa + h,argA
+ACGK,ACGK,acetylglutamate kinase,[c] : acglu + atp --> acg5p + adp,argB
+AGPR,AGPR,N-acetyl-g-glutamyl-phosphate reductase,[c] : acg5sa + nadp + pi <==> acg5p + h + nadph,argC
+ACOTA,ACOTA,acetylornithine transaminase,[c] : acorn + akg <==> acg5sa + glu-L,astC or argD or gabT or puuE
+ACODA,ACODA,acetylornithine deacetylase,[c] : acorn + h2o --> ac + orn,argE
+OCBT,OCBT,ornithine carbamoyltransferase,[c] : cbp + orn <==> citr-L + h + pi,argI or argF
+ARGSS,ARGSS,argininosuccinate synthase,[c] : asp-L + atp + citr-L --> amp + argsuc + h + ppi,argG
+ARGSL,ARGSL,argininosuccinate lyase,[c] : argsuc <==> arg-L + fum,argH
+ASPTA,ASPTA,aspartate transaminase,[c] : akg + asp-L <==> glu-L + oaa,aspC or tyrB
+ASNS1,ASNS1,asparagine synthase (glutamine-hydrolysing),[c] : asp-L + atp + gln-L + h2o --> amp + asn-L + glu-L + h + ppi,asnB
+ASNS2,ASNS2,asparagine synthetase,[c] : asp-L + atp + nh4 --> amp + asn-L + h + ppi,asnA or asnB
+ALATA_L,ALATA_L,L-alanine transaminase,[c] : akg + ala-L <==> glu-L + pyr,alaA or alaC
+PGCD,PGCD,phosphoglycerate dehydrogenase,[c] : 3pg + nad --> 3php + h + nadh,serA
+PSERT,PSERT,phosphoserine transaminase,[c] : 3php + glu-L --> akg + pser-L,serC
+PSP_L,PSP_L,phosphoserine phosphatase (L-serine),[c] : h2o + pser-L --> pi + ser-L,serB
+GHMT2r,GHMT2r,"glycine hydroxymethyltransferase, reversible",[c] : ser-L + thf <==> gly + h2o + mlthf,glyA
+GLYCL,GLYCL,Glycine Cleavage System,[c] : gly + nad + thf --> co2 + mlthf + nadh + nh4,gcvH and gcvP and lpd and gcvT
+GLYAT,GLYAT,glycine C-acetyltransferase,[c] : accoa + gly <==> 2aobut + coa,kbl
+THRD,THRD,L-threonine dehydrogenase,[c] : nad + thr-L --> 2aobut + h + nadh,tdh or yiaY
+SERAT,SERAT,serine O-acetyltransferase,[c] : accoa + ser-L <==> acser + coa,cysE
+CYSS,CYSS,cysteine synthase,[c] : acser + h2s --> ac + cys-L + h,cysM or cysK
+ASPTA,ASPTA,aspartate transaminase,[c] : akg + asp-L <==> glu-L + oaa,aspC or tyrB
+ASPK,ASPK,aspartate kinase,[c] : asp-L + atp <==> 4pasp + adp,thrA or metL or lysC
+ASAD,ASAD,aspartate-semialdehyde dehydrogenase,[c] : aspsa + nadp + pi <==> 4pasp + h + nadph,asd
+DHDPS,DHDPS,dihydrodipicolinate synthase,[c] : aspsa + pyr --> 23dhdp + h + (2) h2o,dapA
+DHDPRy,DHDPRy,dihydrodipicolinate reductase (NADPH),[c] : 23dhdp + h + nadph --> nadp + thdp,dapB
+THDPS,THDPS,tetrahydrodipicolinate succinylase,[c] : h2o + succoa + thdp --> coa + sl2a6o,dapD
+SDPTA,SDPTA,succinyldiaminopimelate transaminase,[c] : akg + sl26da <==> glu-L + sl2a6o,argD or puuE or astC or gabT or serC
+SDPDS,SDPDS,succinyl-diaminopimelate desuccinylase,[c] : h2o + sl26da --> 26dap-LL + succ,dapE
+DAPE,DAPE,diaminopimelate epimerase,[c] : 26dap-LL <==> 26dap-M,dapF
+DAPDC,DAPDC,diaminopimelate decarboxylase,[c] : 26dap-M + h --> co2 + lys-L,lysA
+HSK,HSK,homoserine kinase,[c] : atp + hom-L --> adp + h + phom,thrB
+THRS,THRS,threonine synthase,[c] : h2o + phom --> pi + thr-L,thrC
+HSDy,HSDy,homoserine dehydrogenase (NADPH),[c] : hom-L + nadp <==> aspsa + h + nadph,metL or thrA
+HSST,HSST,homoserine O-succinyltransferase,[c] : hom-L + succoa --> coa + suchms,metA
+SHSL1,SHSL1,O-succinylhomoserine lyase (L-cysteine),[c] : cys-L + suchms --> cyst-L + h + succ,metB
+CYSTL,CYSTL,cystathionine b-lyase,[c] : cyst-L + h2o --> hcys-L + nh4 + pyr,metC or malY
+METS,METS,methionine synthase,[c] : 5mthf + hcys-L --> h + met-L + thf,metH or metE
+ACLS,ACLS,acetolactate synthase,[c] : h + (2) pyr --> alac-S + co2,(ilvI and ilvH) or (ilvN and ilvB)
+KARA1,KARA1,"ketol-acid reductoisomerase (2,3-dihydroxy-3-methylbutanoate)",[c] : 23dhmb + nadp <==> alac-S + h + nadph,ilvC
+DHAD1,DHAD1,"dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylbutanoate)",[c] : 23dhmb --> 3mob + h2o,ilvD
+VALTA,VALTA,valine transaminase,[c] : akg + val-L <==> 3mob + glu-L,ilvE
+IPPS,IPPS,2-isopropylmalate synthase,[c] : 3mob + accoa + h2o --> 3c3hmp + coa + h,leuA
+IPPMIb,IPPMIb,2-isopropylmalate hydratase,[c] : 2ippm + h2o <==> 3c3hmp,leuD and leuC
+IPPMIa,IPPMIa,3-isopropylmalate dehydratase,[c] : 3c2hmp <==> 2ippm + h2o,leuD and leuC
+IPMD,IPMD,3-isopropylmalate dehydrogenase,[c] : 3c2hmp + nad --> 3c4mop + h + nadh,leuB or dmlA
+OMCDC,OMCDC,2-Oxo-4-methyl-3-carboxypentanoate decarboxylation,[c] : 3c4mop + h --> 4mop + co2,
+LEUTAi,LEUTAi,leucine transaminase (irreversible),[c] : 4mop + glu-L --> akg + leu-L,ilvE or tyrB
+DHAD2,DHAD2,"Dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylpentanoate)",[c] : 23dhmp --> 3mop + h2o,ilvD
+ILETA,ILETA,isoleucine transaminase,[c] : akg + ile-L <==> 3mop + glu-L,ilvE
+PPNDH,PPNDH,prephenate dehydratase,[c] : h + pphn --> co2 + h2o + phpyr,pheA
+PHETA1,PHETA1,phenylalanine transaminase,[c] : akg + phe-L <==> glu-L + phpyr,tyrB or aspC or ilvE
+CHORM,CHORM,chorismate mutase,[c] : chor --> pphn,pheA or tyrA
+PPND,PPND,prephenate dehydrogenase,[c] : nad + pphn --> 34hpp + co2 + nadh,tyrA
+TYRTA,TYRTA,tyrosine transaminase,[c] : akg + tyr-L <==> 34hpp + glu-L,tyrB or aspC or ilvE
+PRPPS,PRPPS,phosphoribosylpyrophosphate synthetase,[c] : atp + r5p <==> amp + h + prpp,prs
+DHQS,DHQS,3-dehydroquinate synthase,[c] : 2dda7p --> 3dhq + pi,aroB
+DHQTi,DHQTi,"3-dehydroquinate dehydratase, irreversible",[c] : 3dhq --> 3dhsk + h2o,aroD
+SHK3Dr,SHK3Dr,shikimate dehydrogenase,[c] : 3dhsk + h + nadph <==> nadp + skm,aroE or ydiB
+SHKK,SHKK,shikimate kinase,[c] : atp + skm --> adp + h + skm5p,aroK or aroL
+PSCVT,PSCVT,3-phosphoshikimate 1-carboxyvinyltransferase,[c] : pep + skm5p <==> 3psme + pi,aroA
+CHORS,CHORS,chorismate synthase,[c] : 3psme --> chor + pi,aroC
+ANS,ANS,anthranilate synthase,[c] : chor + gln-L --> anth + glu-L + h + pyr,trpD and trpE
+ANPRT,ANPRT,anthranilate phosphoribosyltransferase,[c] : anth + prpp --> ppi + pran,trpD
+PRAIi,PRAIi,phosphoribosylanthranilate isomerase (irreversible),[c] : pran --> 2cpr5p,trpC
+IGPS,IGPS,indole-3-glycerol-phosphate synthase,[c] : 2cpr5p + h --> 3ig3p + co2 + h2o,trpC
+TRPS1,TRPS1,tryptophan synthase (indoleglycerol phosphate),[c] : 3ig3p + ser-L --> g3p + h2o + trp-L,trpA and trpB
+ATPPRT,ATPPRT,ATP phosphoribosyltransferase,[c] : atp + prpp --> ppi + prbatp,hisG
+PRATPP,PRATPP,phosphoribosyl-ATP pyrophosphatase,[c] : h2o + prbatp --> h + ppi + prbamp,hisI
+PRAMPC,PRAMPC,phosphoribosyl-AMP cyclohydrolase,[c] : h2o + prbamp --> prfp,hisI
+PRMICI,PRMICI,1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino)imidazole-4-carboxamide isomerase,[c] : prfp <==> prlp,hisA
+IG3PS,IG3PS,Imidazole-glycerol-3-phosphate synthase,[c] : gln-L + prlp --> aicar + eig3p + glu-L + h,hisH and hisF
+IGPDH,IGPDH,imidazoleglycerol-phosphate dehydratase,[c] : eig3p --> h2o + imacp,hisB
+HSTPT,HSTPT,histidinol-phosphate transaminase,[c] : glu-L + imacp --> akg + hisp,hisC
+HISTP,HISTP,histidinol-phosphatase,[c] : h2o + hisp --> histd + pi,hisB
+HISTD,HISTD,histidinol dehydrogenase,[c] : h2o + histd + (2) nad --> (3) h + his-L + (2) nadh,hisD
+5MTHF,NA,NA,1mlthfl_c+1nadhd_c=15mthf_c+1nad_c,NA
+THF,NA,NA,1mlthfl_c+1nadp_c=1thf_c+1nadphp_c,NA
+EX_pro-L(e),EX_pro-L(e),L-Proline exchange,[e] : pro-L <==>,NA
+EX_arg-L(e),EX_arg-L(e),L-Arginine exchange,[e] : arg-L <==>,NA
+EX_asp-L(e),EX_asp-L(e),L-Aspartate exchange,[e] : asp-L <==>,NA
+ASPtex,ASPtex,L-aspartate transport via diffusion (extracellular to periplasm),asp-L[e] <==> asp-L[p],phoE or ompF or ompN or ompC
+EX_ala-L(e),EX_ala-L(e),L-Alanine exchange,[e] : ala-L <==>,NA
+EX_ser-L(e),EX_ser-L(e),L-Serine exchange,[e] : ser-L <==>,NA
+EX_gly(e),EX_gly(e),Glycine exchange,[e] : gly <==>,NA
+EX_thr-L(e),EX_thr-L(e),L-Threonine exchange,[e] : thr-L <==>,NA
+EX_cys-L(e),EX_cys-L(e),L-Cysteine exchange,[e] : cys-L <==>,NA
+EX_lys-L(e),EX_lys-L(e),L-Lysine exchange,[e] : lys-L <==>,NA
+EX_val-L(e),EX_val-L(e),L-Valine exchange,[e] : val-L <==>,NA
+EX_met-L(e),EX_met-L(e),L-Methionine exchange,[e] : met-L <==>,NA
+EX_leu-L(e),EX_leu-L(e),L-Leucine exchange,[e] : leu-L <==>,NA
+EX_ile-L(e),EX_ile-L(e),L-Isoleucine exchange,[e] : ile-L <==>,NA
+EX_phe-L(e),EX_phe-L(e),L-Phenylalanine exchange,[e] : phe-L <==>,NA
+EX_tyr-L(e),EX_tyr-L(e),L-Tyrosine exchange,[e] : tyr-L <==>,NA
+EX_trp-L(e),EX_trp-L(e),L-Tryptophan exchange,[e] : trp-L <==>,NA
+EX_his-L(e),EX_his-L(e),L-Histidine exchange,[e] : his-L <==>,NA
+COA,1acetylco_c=1coa_c',1acetylco_c=1coa_c',,NA
+GLUPRT,GLUPRT,glutamine phosphoribosyldiphosphate amidotransferase,[c] : gln-L + h2o + prpp --> glu-L + ppi + pram,purF
+PRAGSr,PRAGSr,phosphoribosylglycinamide synthase,[c] : atp + gly + pram <==> adp + gar + h + pi,purD
+GARFT,GARFT,phosphoribosylglycinamide formyltransferase,[c] : 10fthf + gar <==> fgam + h + thf,purN
+PRFGS,PRFGS,phosphoribosylformylglycinamidine synthase,[c] : atp + fgam + gln-L + h2o --> adp + fpram + glu-L + h + pi,purL
+PRAIS,PRAIS,phosphoribosylaminoimidazole synthase,[c] : atp + fpram --> adp + air + (2) h + pi,purM
+AIRC2,AIRC2,phosphoribosylaminoimidazole carboxylase,[c] : air + atp + hco3 --> 5caiz + adp + h + pi,purK
+AIRC3,AIRC3,phosphoribosylaminoimidazole carboxylase (mutase rxn),[c] : 5aizc <==> 5caiz,purE
+PRASCS,PRASCS,phosphoribosylaminoimidazolesuccinocarboxamide synthase,[c] : 5aizc + asp-L + atp --> 25aics + adp + h + pi,NA
+ADSL2r,ADSL2r,adenylosuccinate lyase,[c] : 25aics <==> aicar + fum,purB
+AICART,AICART,phosphoribosylaminoimidazolecarboxamide formyltransferase,[c] : 10fthf + aicar <==> fprica + thf,purH
+IMPC,IMPC,IMP cyclohydrolase,[c] : h2o + imp <==> fprica,purH
+ADSS,ADSS,adenylosuccinate synthase,[c] : asp-L + gtp + imp --> dcamp + gdp + (2) h + pi,purA
+ADSL1r,ADSL1r,adenylsuccinate lyase,[c] : dcamp <==> amp + fum,purB
+THRD_L,THRD_L,L-threonine deaminase,[c] : thr-L --> 2obut + nh4,ilvA or tdcB
+ACHBS,ACHBS,2-aceto-2-hydroxybutanoate synthase,[c] : 2obut + h + pyr --> 2ahbut + co2,(ilvN and ilvB) or (ilvI and ilvH)
+KARA2,KARA2,ketol-acid reductoisomerase (2-Acetolactate),[c] : 2ahbut + h + nadph <==> 23dhmp + nadp,ilvC
+ACCOAC,ACCOAC,acetyl-CoA carboxylase,[c] : accoa + atp + hco3 --> adp + h + malcoa + pi,accD and accB and accC and accA
+MCOATA,MCOATA,Malonyl-CoA-ACP transacylase,[c] : ACP + malcoa <==> coa + malACP,acpP and fabD
+MACPD,MACPD,Malonyl-ACP decarboxylase,[c] : h + malACP --> acACP + co2,fabB
+ACOATA,ACOATA,Acetyl-CoA ACP transacylase,[c] : ACP + accoa <==> acACP + coa,acpP and fabH
+KAS15,KAS15,beta-ketoacyl-ACP synthase (2),[c] : accoa + h + malACP --> actACP + co2 + coa,fabH
+3HAD40,3HAD40,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C4:0),[c] : 3haACP --> but2eACP + h2o,fabA or fabZ
+3HAD60,3HAD60,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C6:0),[c] : 3hhexACP --> h2o + thex2eACP,fabA or fabZ
+3HAD80,3HAD80,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C8:0),[c] : 3hoctACP --> h2o + toct2eACP,fabA or fabZ
+ACOAD3f,ACOAD3f,acyl-CoA dehydrogenase (octanoyl-CoA),[c] : fad + occoa <==> fadh2 + oc2coa,fadE
+ECOAH3,ECOAH3,3-hydroxyacyl-CoA dehydratase (3-hydroxyoctanoyl-CoA),[c] : 3hocoa <==> h2o + oc2coa,fadJ or fadB
+HACD3i,HACD3i,3-hydroxyacyl-CoA dehydrogenase (3-oxooctanoyl-CoA),[c] : 3hocoa + nad --> 3oocoa + h + nadh,NA
+KAT3,KAT3,3-ketoacyl-CoA thiolase,[c] : 3oocoa + coa --> accoa + hxcoa,NA
+ACOAD2f,ACOAD2f,acyl-CoA dehydrogenase (hexanoyl-CoA),[c] : fad + hxcoa <==> fadh2 + hx2coa,fadE
+HEXt2rpp,HEXt2rpp,"hexanoate transport via proton symport, reversible (periplasm)",h[p] + hxa[p] <==> h[c] + hxa[c],atoE
+HXCT,HXCT,Acetyl-CoA:hexanoate-CoA transferase,[c] : accoa + hxa --> ac + hxcoa,atoA and atoD
+ECOAH2,ECOAH2,3-hydroxyacyl-CoA dehydratase (3-hydroxyhexanoyl-CoA),[c] : 3hhcoa <==> h2o + hx2coa,fadJ or fadB
+HACD2i,HACD2i,3-hydroxyacyl-CoA dehydrogenase (3-oxohexanoyl-CoA),[c] : 3hhcoa + nad --> 3ohcoa + h + nadh,NA
+KAT2,KAT2,3-ketoacyl-CoA thiolase,[c] : 3ohcoa + coa --> accoa + btcoa,NA
+BUTCT,BUTCT,Acetyl-CoA:butyrate-CoA transferase,[c] : accoa + but --> ac + btcoa,atoA and atoD
+BUTt2rpp,BUTt2rpp,"Butyrate transport via proton symport, reversible (periplasm)",but[p] + h[p] <==> but[c] + h[c],atoE
+BUTtex,BUTtex,Butyrate transport via diffusion (extracellular to periplasm),but[e] <==> but[p],phoE or ompF or ompN or ompC
+EX_but(e),EX_but(e),Butyrate (n-C4:0) exchange,[e] : but <==>,NA
+ACOAD1f,ACOAD1f,acyl-CoA dehydrogenase (butanoyl-CoA),[c] : btcoa + fad <==> b2coa + fadh2,fadE
+ECOAH1,ECOAH1,3-hydroxyacyl-CoA dehydratase (3-hydroxybutanoyl-CoA),[c] : 3hbcoa <==> b2coa + h2o,fadJ or fadB
+HACD1i,HACD1i,3-hydroxyacyl-CoA dehydrogenase (acetoacetyl-CoA),[c] : 3hbcoa + nad --> aacoa + h + nadh,NA
+KAT1,KAT1,3-ketoacyl-CoA thiolase,[c] : aacoa + coa --> (2) accoa,NA
+FADRx,FADRx,FAD reductase,[c] : fad + h + nadh --> fadh2 + nad,fre
+FADRx2,FADRx2,FAD reductase,[c] : fad + h + nadph --> fadh2 + nadp,cysJ and cysI
+3OAS100,3OAS100,3-oxoacyl-[acyl-carrier-protein] synthase (n-C10:0),[c] : h + malACP + ocACP --> 3odecACP + ACP + co2,fabB or fabF
+3OAS120,3OAS120,3-oxoacyl-[acyl-carrier-protein] synthase (n-C12:0),[c] : dcaACP + h + malACP --> 3oddecACP + ACP + co2,fabF or fabB
+3OAS121,3OAS121,3-oxoacyl-[acyl-carrier-protein] synthase (n-C12:1),[c] : cdec3eACP + h + malACP --> 3ocddec5eACP + ACP + co2,fabB
+3OAS140,3OAS140,3-oxoacyl-[acyl-carrier-protein] synthase (n-C14:0),[c] : ddcaACP + h + malACP --> 3omrsACP + ACP + co2,fabB or fabF
+3OAS141,3OAS141,3-oxoacyl-[acyl-carrier-protein] synthase (n-C14:1),[c] : cddec5eACP + h + malACP --> 3ocmrs7eACP + ACP + co2,fabB
+3OAS160,3OAS160,3-oxoacyl-[acyl-carrier-protein] synthase (n-C16:0),[c] : h + malACP + myrsACP --> 3opalmACP + ACP + co2,fabB or fabF
+3OAS161,3OAS161,3-oxoacyl-[acyl-carrier-protein] synthase (n-C16:1),[c] : h + malACP + tdeACP --> 3ocpalm9eACP + ACP + co2,fabB
+3OAS180,3OAS180,3-oxoacyl-[acyl-carrier-protein] synthase (n-C18:0),[c] : h + malACP + palmACP --> 3ooctdACP + ACP + co2,fabF or fabB
+3OAS60,3OAS60,3-oxoacyl-[acyl-carrier-protein] synthase (n-C6:0),[c] : butACP + h + malACP --> 3ohexACP + ACP + co2,fabF or fabB
+3OAS80,3OAS80,3-oxoacyl-[acyl-carrier-protein] synthase (n-C8:0),[c] : h + hexACP + malACP --> 3ooctACP + ACP + co2,fabB or fabF
+3OAR100,3OAR100,3-oxoacyl-[acyl-carrier-protein] reductase (n-C10:0),[c] : 3odecACP + h + nadph <==> 3hdecACP + nadp,fabG
+3OAR120,3OAR120,3-oxoacyl-[acyl-carrier-protein] reductase (n-C12:0),[c] : 3oddecACP + h + nadph <==> 3hddecACP + nadp,fabG
+3OAR121,3OAR121,3-oxoacyl-[acyl-carrier-protein] reductase (n-C12:1),[c] : 3ocddec5eACP + h + nadph --> 3hcddec5eACP + nadp,fabG
+3OAR140,3OAR140,3-oxoacyl-[acyl-carrier-protein] reductase (n-C14:0),[c] : 3omrsACP + h + nadph <==> 3hmrsACP + nadp,fabG
+3OAR141,3OAR141,3-oxoacyl-[acyl-carrier-protein] reductase (n-C14:1),[c] : 3ocmrs7eACP + h + nadph --> 3hcmrs7eACP + nadp,fabG
+3OAR160,3OAR160,3-oxoacyl-[acyl-carrier-protein] reductase (n-C16:0),[c] : 3opalmACP + h + nadph <==> 3hpalmACP + nadp,fabG
+3OAR161,3OAR161,3-oxoacyl-[acyl-carrier-protein] reductase (n-C16:1),[c] : 3ocpalm9eACP + h + nadph --> 3hcpalm9eACP + nadp,fabG
+3OAR180,3OAR180,3-oxoacyl-[acyl-carrier-protein] reductase (n-C18:0),[c] : 3ooctdACP + h + nadph <==> 3hoctaACP + nadp,fabG
+3OAR40,3OAR40,3-oxoacyl-[acyl-carrier-protein] reductase (n-C4:0),[c] : actACP + h + nadph <==> 3haACP + nadp,fabG
+3OAR60,3OAR60,3-oxoacyl-[acyl-carrier-protein] reductase (n-C6:0),[c] : 3ohexACP + h + nadph <==> 3hhexACP + nadp,fabG
+3OAR80,3OAR80,3-oxoacyl-[acyl-carrier-protein] reductase (n-C8:0),[c] : 3ooctACP + h + nadph <==> 3hoctACP + nadp,fabG
+EAR100x,EAR100x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C10:0),[c] : h + nadh + tdec2eACP --> dcaACP + nad,fabI
+EAR100y,EAR100y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C10:0),[c] : h + nadph + tdec2eACP --> dcaACP + nadp,fabI
+EAR120x,EAR120x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C12:0),[c] : h + nadh + tddec2eACP --> ddcaACP + nad,fabI
+EAR120y,EAR120y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C12:0),[c] : h + nadph + tddec2eACP --> ddcaACP + nadp,fabI
+EAR121x,EAR121x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C12:1),[c] : h + nadh + t3c5ddeceACP --> cddec5eACP + nad,fabI
+EAR121y,EAR121y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C12:1),[c] : h + nadph + t3c5ddeceACP --> cddec5eACP + nadp,fabI
+EAR140x,EAR140x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C14:0),[c] : h + nadh + tmrs2eACP --> myrsACP + nad,fabI
+EAR140y,EAR140y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C14:0),[c] : h + nadph + tmrs2eACP --> myrsACP + nadp,fabI
+EAR141x,EAR141x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C14:1),[c] : h + nadh + t3c7mrseACP --> nad + tdeACP,fabI
+EAR141y,EAR141y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C14:1),[c] : h + nadph + t3c7mrseACP --> nadp + tdeACP,fabI
+EAR160x,EAR160x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C16:0),[c] : h + nadh + tpalm2eACP --> nad + palmACP,fabI
+EAR160y,EAR160y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C16:0),[c] : h + nadph + tpalm2eACP --> nadp + palmACP,fabI
+EAR161x,EAR161x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C16:1),[c] : h + nadh + t3c9palmeACP --> hdeACP + nad,fabI
+EAR161y,EAR161y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C16:1),[c] : h + nadph + t3c9palmeACP --> hdeACP + nadp,fabI
+EAR180x,EAR180x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C18:0),[c] : h + nadh + toctd2eACP --> nad + ocdcaACP,fabI
+EAR180y,EAR180y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C18:0),[c] : h + nadph + toctd2eACP --> nadp + ocdcaACP,fabI
+EAR181x,EAR181x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C18:1),[c] : h + nadh + t3c11vaceACP --> nad + octeACP,fabI
+EAR181y,EAR181y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C18:1),[c] : h + nadph + t3c11vaceACP --> nadp + octeACP,fabI
+EAR40x,EAR40x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C4:0),[c] : but2eACP + h + nadh --> butACP + nad,fabI
+EAR40y,EAR40y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C4:0),[c] : but2eACP + h + nadph --> butACP + nadp,fabI
+EAR60x,EAR60x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C6:0),[c] : h + nadh + thex2eACP --> hexACP + nad,fabI
+EAR60y,EAR60y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C6:0),[c] : h + nadph + thex2eACP --> hexACP + nadp,fabI
+EAR80x,EAR80x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C8:0),[c] : h + nadh + toct2eACP --> nad + ocACP,fabI
+EAR80y,EAR80y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C8:0),[c] : h + nadph + toct2eACP --> nadp + ocACP,fabI
+FA80ACPHi,FA80ACPHi,fatty-acyl-ACP hydrolase,[c] : h2o + ocACP --> ACP + h + octa,acpH
+FACOAE100,FACOAE100,fatty-acid-CoA thioesterase (decanoate),[c] : dcacoa + h2o --> coa + dca + h,tesB
+FACOAE120,FACOAE120,fatty-acid-CoA thioesterase (dodecanoate),[c] : ddcacoa + h2o --> coa + ddca + h,tesB
+FACOAE140,FACOAE140,fatty-acid-CoA thioesterase (tetradecanoate),[c] : h2o + tdcoa --> coa + h + ttdca,tesB
+FACOAE141,FACOAE141,fatty-acid-CoA thioesterase (tetradecenoate),[c] : h2o + tdecoa --> coa + h + ttdcea,tesB
+FACOAE160,FACOAE160,fatty-acid-CoA thioesterase (hexadecanoate),[c] : h2o + pmtcoa --> coa + h + hdca,tesB
+FACOAE161,FACOAE161,fatty-acid-CoA thioesterase (hexadecenoate),[c] : h2o + hdcoa --> coa + h + hdcea,tesB
+FACOAE180,FACOAE180,fatty-acid-CoA thioesterase (octadecanoate),[c] : h2o + stcoa --> coa + h + ocdca,tesB
+FACOAE181,FACOAE181,fatty-acid-CoA thioesterase (octadecenoate),[c] : h2o + odecoa --> coa + h + ocdcea,tesB
+FACOAE60,FACOAE60,fatty-acid-CoA thioesterase (hexanoate),[c] : h2o + hxcoa --> coa + h + hxa,tesB
+FACOAE80,FACOAE80,fatty-acid-CoA thioesterase (octanoate),[c] : h2o + occoa --> coa + h + octa,tesB
+FA100ACPHi,FA100ACPHi,fatty-acyl-ACP hydrolase,[c] : dcaACP + h2o --> ACP + dca + h,acpH
+FA120ACPHi,FA120ACPHi,fatty-acyl-ACP hydrolase,[c] : ddcaACP + h2o --> ACP + ddca + h,acpH
+FA140ACPHi,FA140ACPHi,fatty-acyl-ACP hydrolase,[c] : h2o + myrsACP --> ACP + h + ttdca,acpH
+FA141ACPHi,FA141ACPHi,fatty-acyl-ACP hydrolase,[c] : h2o + tdeACP --> ACP + h + ttdcea,acpH
+FA160ACPHi,FA160ACPHi,fatty-acyl-ACP hydrolase,[c] : h2o + palmACP --> ACP + h + hdca,acpH
+FA161ACPHi,FA161ACPHi,fatty-acyl-ACP hydrolase,[c] : h2o + hdeACP --> ACP + h + hdcea,acpH
+KAT4,KAT4,3-ketoacyl-CoA thiolase,[c] : 3odcoa + coa --> accoa + occoa,NA
+KAT5,KAT5,3-ketoacyl-CoA thiolase,[c] : 3oddcoa + coa --> accoa + dcacoa,NA
+KAT6,KAT6,3-ketoacyl-CoA thiolase,[c] : 3otdcoa + coa --> accoa + ddcacoa,NA
+KAT7,KAT7,3-ketoacyl-CoA thiolase,[c] : 3ohdcoa + coa --> accoa + tdcoa,NA
+KAT8,KAT8,3-ketoacyl-CoA thiolase,[c] : 3oodcoa + coa --> accoa + pmtcoa,NA
+HACD4i,HACD4i,3-hydroxyacyl-CoA dehydrogenase (3-oxodecanoyl-CoA),[c] : 3hdcoa + nad --> 3odcoa + h + nadh,NA
+HACD5i,HACD5i,3-hydroxyacyl-CoA dehydrogenase (3-oxododecanoyl-CoA),[c] : 3hddcoa + nad --> 3oddcoa + h + nadh,NA
+HACD6i,HACD6i,3-hydroxyacyl-CoA dehydrogenase (3-oxotetradecanoyl-CoA),[c] : 3htdcoa + nad --> 3otdcoa + h + nadh,NA
+HACD7i,HACD7i,3-hydroxyacyl-CoA dehydrogenase (3-oxohexadecanoyl-CoA),[c] : 3hhdcoa + nad --> 3ohdcoa + h + nadh,NA
+HACD8i,HACD8i,3-hydroxyacyl-CoA dehydrogenase (3-oxooctadecanoyl-CoA),[c] : 3hodcoa + nad --> 3oodcoa + h + nadh,NA
+ECOAH4,ECOAH4,3-hydroxyacyl-CoA dehydratase (3-hydroxydecanoyl-CoA),[c] : 3hdcoa <==> dc2coa + h2o,fadJ or fadB
+ECOAH5,ECOAH5,3-hydroxyacyl-CoA dehydratase (3-hydroxydodecanoyl-CoA),[c] : 3hddcoa <==> dd2coa + h2o,fadJ or fadB
+ECOAH6,ECOAH6,3-hydroxyacyl-CoA dehydratase (3-hydroxytetradecanoyl-CoA),[c] : 3htdcoa <==> h2o + td2coa,fadJ or fadB
+ECOAH7,ECOAH7,3-hydroxyacyl-CoA dehydratase (3-hydroxyhexadecanoyl-CoA),[c] : 3hhdcoa <==> h2o + hdd2coa,fadJ or fadB
+ECOAH8,ECOAH8,3-hydroxyacyl-CoA dehydratase (3-hydroxyoctadecanoyl-CoA),[c] : 3hodcoa <==> h2o + od2coa,fadJ or fadB
+ACOAD4f,ACOAD4f,acyl-CoA dehydrogenase (decanoyl-CoA),[c] : dcacoa + fad <==> dc2coa + fadh2,fadE
+ACOAD5f,ACOAD5f,acyl-CoA dehydrogenase (dodecanoyl-CoA),[c] : ddcacoa + fad <==> dd2coa + fadh2,fadE
+ACOAD6f,ACOAD6f,acyl-CoA dehydrogenase (tetradecanoyl-CoA),[c] : fad + tdcoa <==> fadh2 + td2coa,fadE
+ACOAD7f,ACOAD7f,acyl-CoA dehydrogenase (hexadecanoyl-CoA),[c] : fad + pmtcoa <==> fadh2 + hdd2coa,fadE
+ACOAD8f,ACOAD8f,acyl-CoA dehydrogenase (octadecanoyl-CoA),[c] : fad + stcoa <==> fadh2 + od2coa,fadE
+EX_octa(e),EX_octa(e),octanoate (n-C8:0) exchange,[e] : octa <==>,NA
+OCTAtex,OCTAtex,Octanoate transport via diffusion (extracellular to periplasm),octa[e] + h[e]<==> octa[c] + h[c],phoE or ompF or ompN or ompC
+HXAtex,HXAtex,Hexanoate transport via diffusion (extracellular to periplasm),hxa[e] + h[e]<==>hxa[c] + h[c],phoE or ompF or ompN or ompC
+EX_hxa(e),EX_hxa(e),Hexanoate (n-C6:0) exchange,[e] : hxa <==>,NA
+EX_dca(e),EX_dca(e),Decanoate (n-C10:0) exchange,[e] : dca <==>,NA
+DCAtex,DCAtex,Decanoate transport via diffusion (extracellular to periplasm),dca[e] + h[e]<==> dca[c] + h[c],phoE or ompF or ompN or ompC
+EX_ddca(e),EX_ddca(e),Dodecanoate (n-C12:0) exchange,[e] : ddca <==>,NA
+DDCAtex,DDCAtex,Dodecanoate transport via diffusion (extracellular to periplasm),ddca[e] + h[e]<==> ddca[c] + h[c],NA
+EX_hdca(e),EX_hdca(e),Hexadecanoate (n-C16:0) exchange,[e] : hdca <==>,NA
+HDCAtex,HDCAtex,Hexadecanoate transport via diffusion (extracellular to periplasm),hdca[e] + h[e]<==>hdca[c] + h[c],NA
+EX_ocdca(e),EX_ocdca(e),octadecanoate (n-C18:0) exchange,[e] : ocdca <==>,NA
+OCDCAtex,OCDCAtex,octadecanoate transport via diffusion (extracellular to periplasm),ocdca[e] + h[e]<==> ocdca[c] + h[c],NA
+EX_ttdca(e),EX_ttdca(e),tetradecanoate (n-C14:0) exchange,[e] : ttdca <==>,NA
+TTDCAtex,TTDCAtex,tetradecanoate transport via diffusion (extracellular to periplasm),ttdca[e] + h[e]<==> ttdca[c] + h[c],NA
+3HAD100,3HAD100,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C10:0),[c] : 3hdecACP --> h2o + tdec2eACP,fabA or fabZ
+3HAD120,3HAD120,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C12:0),[c] : 3hddecACP --> h2o + tddec2eACP,fabZ or fabA
+3HAD121,3HAD121,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C12:1),[c] : 3hcddec5eACP --> h2o + t3c5ddeceACP,fabA or fabZ
+3HAD140,3HAD140,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C14:0),[c] : 3hmrsACP --> h2o + tmrs2eACP,fabA or fabZ
+3HAD141,3HAD141,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C14:1),[c] : 3hcmrs7eACP --> h2o + t3c7mrseACP,fabA or fabZ
+3HAD160,3HAD160,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C16:0),[c] : 3hpalmACP --> h2o + tpalm2eACP,fabA or fabZ
+3HAD161,3HAD161,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C16:1),[c] : 3hcpalm9eACP --> h2o + t3c9palmeACP,fabA or fabZ
+3HAD180,3HAD180,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C18:0),[c] : 3hoctaACP --> h2o + toctd2eACP,fabA or fabZ
+OCTEACP,NA,h2o + ocdcaACP_c --> octeACP_c + h + ACP,,NA
+EX_OCTEACP,NA,-->octeACP_c,,NA
+T2DECAI,T2DECAI,trans-2-decenoyl-ACP isomerase,[c] : tdec2eACP <==> cdec3eACP,fabA
+TDECOAI,TDECOAI,tetradecenoyl-coa cis-trans isomerization,[c] : tdecoa --> td2coa,NA
+HDCOAI,HDCOAI,hexadecenoyl-coa cis-trans isomerization,[c] : hdcoa --> hdd2coa,NA
+ODECOAI,ODECOAI,Octadecenoyl-coa cis-trans isomerization,[c] : odecoa --> od2coa,NA
+EX_ocdcea(e),EX_ocdcea(e),octadecenoate (n-C18:1) exchange,[e] : ocdcea <==>,NA
+PROabcpp,PROabcpp,L-proline transport via ABC system (periplasm),atp[c] + h2o[c] + pro-L[p] --> adp[c] + h[c] + pi[c] + pro-L[c],proV and proW and proX
+ARGt3pp and ARGtex,ARGt3pp and ARGtex,L-arginine transport out via proton antiport (cytoplasm to periplasm),arg-L[c] + h[p] --> arg-L[p] + h[c],NA
+ASPt2_2pp,ASPt2_2pp,Aspartate transport via proton symport (2 H) (periplasm),asp-L[p] + (2) h[p] --> asp-L[c] + (2) h[c],dctA
+ASPt2_3pp,ASPt2_3pp,L-asparate transport via proton symport (3 H) (periplasm),asp-L[p] + (3) h[p] --> asp-L[c] + (3) h[c],dcuA or dcuB
+ASPt2pp and ASPtex,ASPt2pp and ASPtex,L-aspartate transport in via proton symport (periplasm),asp-L[p] + h[p] --> asp-L[c] + h[c],NA
+ASNt2rpp and ASNtex and EX_asn-L(e),ASNt2rpp and ASNtex and EX_asn-L(e),L-asparagine reversible transport via proton symport (periplasm),asn-L[p] + h[p] <==> asn-L[c] + h[c],NA
+SERt2rpp and SERtex,SERt2rpp and SERtex,L-serine reversible transport via proton symport (periplasm),h[p] + ser-L[p] <==> h[c] + ser-L[c],NA
+GLYt2pp and GLYtex,GLYt2pp and GLYtex,glycine transport in via proton symport (periplasm),gly[p] + h[p] --> gly[c] + h[c],NA
+CYSabcpp and CYStex and CYStpp,CYSabcpp and CYStex and CYStpp,L-cysteine uptake via ABC system (periplasm),atp[c] + cys-L[p] + h2o[c] --> adp[c] + cys-L[c] + h[c] + pi[c],NA
+LYSt3pp and LYStex,LYSt3pp and LYStex,L-lysine transport out via proton antiport (cytoplasm to periplasm),h[p] + lys-L[c] --> h[c] + lys-L[p],NA
+METabcpp and METtex,METabcpp and METtex,L-methionine transport via ABC system (periplasm),atp[c] + h2o[c] + met-L[p] --> adp[c] + h[c] + met-L[c] + pi[c],NA
+THRabcpp,THRabcpp,L-threonine transport via ABC system (periplasm),atp[c] + h2o[c] + thr-L[p] --> adp[c] + h[c] + pi[c] + thr-L[c],livM and livG and livJ and livH and livF
+THRt2rpp and THRtex,THRt2rpp and THRtex,L-threonine reversible transport via proton symport (periplasm),h[p] + thr-L[p] <==> h[c] + thr-L[c],NA
+VALt2rpp and VALtex,VALt2rpp and VALtex,L-valine reversible transport via proton symport (periplasm),h[p] + val-L[p] <==> h[c] + val-L[c],NA
+ILEabcpp,ILEabcpp,L-isoleucine transport via ABC system (periplasm),atp[c] + h2o[c] + ile-L[p] --> adp[c] + h[c] + ile-L[c] + pi[c],livM and livG and livJ and livH and livF
+ILEt2rpp and ILEtex,ILEt2rpp and ILEtex,L-isoleucine reversible transport via proton symport (periplasm),h[p] + ile-L[p] <==> h[c] + ile-L[c],NA
+LEUt2rpp and LEUtex,LEUt2rpp and LEUtex,L-leucine reversible transport via proton symport (periplasm),h[p] + leu-L[p] <==> h[c] + leu-L[c],NA
+TRPt2rpp and TRPtex,TRPt2rpp and TRPtex,L-tryptophan reversible transport via proton symport (periplasm),h[p] + trp-L[p] <==> h[c] + trp-L[c],NA
+TYRt2rpp and TYRtex,TYRt2rpp and TYRtex,L-tyrosine reversible transport via proton symport (periplasm),h[p] + tyr-L[p] <==> h[c] + tyr-L[c],NA
+PHEt2rpp and PHEtex,PHEt2rpp and PHEtex,L-phenylalanine reversible transport via proton symport (periplasm),h[p] + phe-L[p] <==> h[c] + phe-L[c],NA
+HISt2rpp and HIStex,HISt2rpp and HIStex,L-histidine reversible transport via proton symport (periplasm),h[p] + his-L[p] <==> h[c] + his-L[c],NA
+ALAt2pp and ALAtex,ALAt2pp and ALAtex,L-alanine transport in via proton symport (periplasm),ala-L[p] + h[p] --> ala-L[c] + h[c],NA
+SERD_L,SERD_L,L-serine deaminase,[c] : ser-L --> nh4 + pyr,tdcG or sdaA or sdaB or tnaA or tdcB
+CYSDS,CYSDS,Cysteine Desulfhydrase,[c] : cys-L + h2o --> h2s + nh4 + pyr,metC or tnaA
+ALAR,ALAR,alanine racemase,[c] : ala-L <==> ala-D,dadX or alr
+DAAD,DAAD,D-Amino acid dehydrogenase,[c] : ala-D + fad + h2o --> fadh2 + nh4 + pyr,dadA
+AST,AST,Arginine succinyltransferase,[c] : arg-L + succoa --> coa + h + sucarg,astA
+SADH,SADH,Succinylarginine dihydrolase,[c] : (2) h + (2) h2o + sucarg --> co2 + (2) nh4 + sucorn,astB
+SOTA,SOTA,Succinylornithine transaminase,[c] : akg + sucorn --> glu-L + sucgsa,astC
+SGSAD,SGSAD,Succinylglutamic semialdehyde dehydrogenase,[c] : h2o + nad + --> (2) h + nadh + sucglu,astD
+SGDS,SGDS,Succinylglutamate desuccinylase,[c] : h2o + sucglu --> glu-L + succ,astE
+ARGDC,ARGDC,arginine decarboxylase,[c] : arg-L + h --> agm + co2,adiA
+AGMT,AGMT,agmatinase,[c] : agm + h2o --> ptrc + urea,speB
+GGPTRCS,GGPTRCS,gamma glutamyl putrescine synthase,[c] : atp + glu-L + ptrc --> adp + ggptrc + h + pi,puuA
+GGPTRCO,GGPTRCO,gamma glutamyl putrescine oxidase,[c] : ggptrc + h2o + o2 --> ggbutal + h2o2 + nh4,puuB
+GGGABADr,GGGABADr,gamma-glutamyl-gamma aminobutyric acid dehydrogenase,[c] : ggbutal + h2o + nadp <==> gg4abut + (2) h + nadph,puuC
+GGGABAH,GGGABAH,gamma-glutamyl-gamma-aminobutyric acid hydrolase,[c] : gg4abut + h2o --> 4abut + glu-L,puuD
+ABTA,ABTA,4-aminobutyrate transaminase,[c] : 4abut + akg --> glu-L + sucsal,gabT or puuE
+SSALx,SSALx,succinate-semialdehyde dehydrogenase (NAD),[c] : h2o + nad + sucsal --> (2) h + nadh + succ,sad
+SSALy,SSALy,succinate-semialdehyde dehydrogenase (NADP),[c] : h2o + nadp + sucsal --> (2) h + nadph + succ,sad or gabD
+PTRCTA,PTRCTA,Putrescine Transaminase,[c] : akg + ptrc --> 4abutn + glu-L,patA
+ABUTD,ABUTD,Aminobutyraldehyde dehydrogenase,[c] : 4abutn + h2o + nad --> 4abut + (2) h + nadh,patD
+ASNN,ASNN,L-asparaginase,[c] : asn-L + h2o --> asp-L + nh4,ansA or iaaA
+ASPT,ASPT,L-aspartase,[c] : asp-L --> fum + nh4,aspA
+GLUDC,GLUDC,Glutamate Decarboxylase,[c] : glu-L + h --> 4abut + co2,gadA or gadB
+LYSDC,LYSDC,lysine decarboxylase,[c] : h + lys-L --> 15dap + co2,ldcC or cadA
+CADVtpp,CADVtpp,Lysine/Cadaverine antiporter (periplasm),15dap[c] + h[p] + lys-L[p] --> 15dap[p] + h[c] + lys-L[c],cadB
+EX_15dap(e) and DAPtex,DAPtex,"1,5-Diaminopentane transport via diffusion (extracellular to periplasm)",15dap[e] <==> 15dap[p],phoE or ompF or ompN or ompC
+PROD2,PROD2,Proline dehydrogenase,[c] : fad + pro-L --> 1pyr5c + fadh2 + h,NA
+G5SADs,G5SADs,L-glutamate 5-semialdehyde dehydratase (spontaneous),[c] : glu5sa --> 1pyr5c + h + h2o,
+SERD_D,SERD_D,D-serine deaminase,[c] : ser-D --> nh4 + pyr,dsdA
+THRAi,THRAi,Threonine aldolase,[c] : thr-L --> acald + gly,NA
+AOBUTDs,AOBUTDs,L-2-amino-3-oxobutanoate decarboxylation (spontaneous),[c] : 2aobut + h --> aact + co2,
+AACTOOR,AACTOOR,Aminoacetone:oxygen oxidoreductase(deaminating)(flavin-containing),[c] : aact + h2o + o2 --> h2o2 + mthgxl + nh4,
+ALR2,ALR2,aldose reductase (methylglyoxal),[c] : h + mthgxl + nadph --> acetol + nadp,dkgA or dkgB or yeaE or gpr
+ALR4x,ALR4x,aldose reductase (acetol),[c] : acetol + h + nadh --> 12ppd-R + nad,gldA
+EX_12ppd-R(e),EX_12ppd-R(e),"(R)-Propane-1,2-diol exchange",[e] : 12ppd-R <==>,NA
+12PPDRtex and 12PPDRtpp,12PPDRtex,"(R)-Propane-1,2-diol transport via diffusion (extracellular to periplasm)",12ppd-R[e] <==> 12ppd-R[p],phoE or ompF or ompN or ompC
+GLYOX3,GLYOX3,glyoxalase III,[c] : h2o + mthgxl --> h + lac-D,hchA
+LGTHL,LGTHL,lactoylglutathione lyase,[c] : gthrd + mthgxl --> lgt-S,gloA
+GLYOX,GLYOX,hydroxyacylglutathione hydrolase,[c] : h2o + lgt-S --> gthrd + h + lac-D,gloB
+FORtppi,NA,NA,for[c] --> for[p],NA
+PFL,NA,NA,[c] : coa + pyr --> accoa + for,NA
+G3PT,NA,NA,[c] : glyc3p + h2o --> glyc + pi,NA
+G3PD2,G3PD2,Glycerol-3-phosphate dehydrogenase (NADP),[c] : glyc3p + nadp <==> dhap + h + nadph,gpsA
+GLYCtex,NA,NA,1glyc_c=1glyc_e',NA
+UP_FOR,NA,NA,=1for_e',NA
+UP_PYR,NA,NA,=1pyr_e',NA
+UP_AC,NA,NA,=1ac_e',NA
+UP_GLU_L,NA,NA,=1glu_L_e',NA
+UP_GLYC,NA,NA,=1glyc_e',NA
+Biomass,Biomass,NA,,NA
+Biomass_Bulk,NA,NA,,NA

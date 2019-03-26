@@ -1,0 +1,49 @@
+ID,BiGG ID,Enzyme,Reaction equation,Gene name
+vPTS,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+vPGI,PGI,glucose-6-phosphate isomerase,(1)g6p[c]<--->(1)f6p[c],pgi
+vPGM,PGMT,phosphoglucomutase,[c] : g1p <==> g6p,yqaB or pgm or ycjU
+vG6PDH,G6PDH2r,glucose 6-phosphate dehydrogenase,(1)g6p[c]+(1)nadp[c]<--->(1)6pgl[c]+(1)h[c]+(1)nadph[c],zwf
+vPFK,PFK,phosphofructokinase,(1)atp[c]+(1)f6p[c]--->(1)adp[c]+(1)fdp[c]+(1)h[c],pfkA or pfkB
+vTA,TALA,transaldolase,(1)g3p[c]+(1)s7p[c]<--->(1)e4p[c]+(1)f6p[c],talB or talA
+vTKA,TKT1,transketolase,(1)r5p[c]+(1)xu5p-D[c]<--->(1)g3p[c]+(1)s7p[c],tktA or tktB
+vTKB,TKT2,transketolase,(1)e4p[c]+(1)xu5p-D[c]<--->(1)f6p[c]+(1)g3p[c],tktA or tktB
+vMURSyNTH,NA,Mureine synthesis,,
+vALDO,FBA,fructose-bisphosphate aldolase,(1)fdp[c]<--->(1)dhap[c]+(1)g3p[c],fbaA or fbaB
+vGAPDH,GAPD,glyceraldehyde-3-phosphate dehydrogenase,(1)g3p[c]+(1)nad[c]+(1)pi[c]<--->(1)13dpg[c]+(1)h[c]+(1)nadh[c],gapA
+vTIS,TPI,triose-phosphate isomerase,(1)dhap[c]<--->(1)g3p[c],tpiA
+vTRPSYNTH,NA,Tryptophan synthesis,,
+vG3PDH,G3PD2,Glycerol-3-phosphate dehydrogenase (NADP),[c] : glyc3p + nadp <==> dhap + h + nadph,gpsA
+vPGK,PGK,phosphoglycerate kinase,(1)3pg[c]+(1)atp[c]<--->(1)13dpg[c]+(1)adp[c],pgk
+vsersynth,NA,Serine synthesis,,
+vrpGluMu,PGM,phosphoglycerate mutase,(1)2pg[c]<--->(1)3pg[c],gpmA or gpmM
+vENO,ENO,enolase,(1)2pg[c]<--->(1)h2o[c]+(1)pep[c],eno
+vPK,PYK,pyruvate kinase,(1)adp[c]+(1)h[c]+(1)pep[c]--->(1)atp[c]+(1)pyr[c],pykA or pykF
+vpepCxylase,PPC,phosphoenolpyruvate carboxylase,(1)co2[c]+(1)h2o[c]+(1)pep[c]--->(1)h[c]+(1)oaa[c]+(1)pi[c],ppc
+vSynth1,NA,Synthesis 1,,
+vSynth2,NA,Synthesis 2,,
+vDAHPS,NA,DAHP synthesis,,
+vPDH,PDH,pyruvate dehydrogenase,(1)coa[c]+(1)nad[c]+(1)pyr[c]--->(1)accoa[c]+(1)co2[c]+(1)nadh[c],aceF and lpd and aceE
+vMethSynth,NA,Methionine synthesis,,
+vPGDH,GND,phosphogluconate dehydrogenase,(1)6pgc[c]+(1)nadp[c]--->(1)co2[c]+(1)nadph[c]+(1)ru5p-D[c],gnd
+vR5PI,RPI,ribose-5-phosphate isomerase,(1)r5p[c]<--->(1)ru5p-D[c],rpiA or rpiB
+vRu5P,RPE,ribulose 5-phosphate 3-epimerase,(1)ru5p-D[c]<--->(1)xu5p-D[c],rpe
+vPPK,PRPPS,phosphoribosylpyrophosphate synthetase,[c] : atp + r5p <==> amp + h + prpp,prs
+vG1PAT,GLGC,glucose-1-phosphate adenylyltransferase,[c] : atp + g1p + h --> adpglc + ppi,glgC
+vG6P,NA,G6P degradation,,
+vf6P,NA,F6P degradation,,
+vfdP,NA,FDP degradation,,
+vGAP,NA,GAP degradation,,
+vDHAP,NA,DHAP degradation,,
+vPGP,NA,PGP degradation,,
+vPG3,NA,PG3 degradation,,
+vpg2,NA,PG2 degradation,,
+vPEP,NA,PEP degradation,,
+vRibu5p,NA,Ribu5P dilution,,
+vRIB5P,NA,Rib5P dilution,,
+vXYL5P,NA,XYL5P dilution,,
+vSED7P,NA,SED7P dilution,,
+vpyr,NA,Pyruvate dilution,,
+vPG,NA,PG dilution,,
+vE4P,NA,E4P dilution,,
+vGLP,NA,GLP dilution,,
+vEXTER,NA,Extracellular glucose kinetics,,

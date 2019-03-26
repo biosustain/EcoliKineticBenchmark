@@ -1,0 +1,69 @@
+ID,BiGG ID,Enzyme,Reaction equation,Gene name
+PGI,PGI,glucose-6-phosphate isomerase,(1)g6p[c]<--->(1)f6p[c],pgi
+PFK,PFK,phosphofructokinase,(1)atp[c]+(1)f6p[c]--->(1)adp[c]+(1)fdp[c]+(1)h[c],pfkA or pfkB
+FBA,FBA,fructose-bisphosphate aldolase,(1)fdp[c]<--->(1)dhap[c]+(1)g3p[c],fbaA or fbaB
+TPI,TPI,triose-phosphate isomerase,(1)dhap[c]<--->(1)g3p[c],tpiA
+GDH,GAPD,glyceraldehyde-3-phosphate dehydrogenase,(1)g3p[c]+(1)nad[c]+(1)pi[c]<--->(1)13dpg[c]+(1)h[c]+(1)nadh[c],gapA
+PGK,PGK,phosphoglycerate kinase,(1)3pg[c]+(1)atp[c]<--->(1)13dpg[c]+(1)adp[c],pgk
+GPM,PGM,phosphoglycerate mutase,(1)2pg[c]<--->(1)3pg[c],gpmA or gpmM
+ENO,ENO,enolase,(1)2pg[c]<--->(1)h2o[c]+(1)pep[c],eno
+PYK,PYK,pyruvate kinase,(1)adp[c]+(1)h[c]+(1)pep[c]--->(1)atp[c]+(1)pyr[c],pykA or pykF
+ZWF,G6PDH2r,glucose 6-phosphate dehydrogenase,(1)g6p[c]+(1)nadp[c]<--->(1)6pgl[c]+(1)h[c]+(1)nadph[c],zwf
+PGL,PGL,6-phosphogluconolactonase,(1)6pgl[c]+(1)h2o[c]--->(1)6pgc[c]+(1)h[c],pgl
+GND,GND,phosphogluconate dehydrogenase,(1)6pgc[c]+(1)nadp[c]--->(1)co2[c]+(1)nadph[c]+(1)ru5p-D[c],gnd
+RPE,RPE,ribulose 5-phosphate 3-epimerase,(1)ru5p-D[c]<--->(1)xu5p-D[c],rpe
+RPI,RPI,ribose-5-phosphate isomerase,(1)r5p[c]<--->(1)ru5p-D[c],rpiA or rpiB
+X5P_GAP_TKT,TKT1,transketolase,(1)r5p[c]+(1)xu5p-D[c]<--->(1)g3p[c]+(1)s7p[c],tktA or tktB
+F6P_E4P_TKT,TKT1,transketolase,(1)r5p[c]+(1)xu5p-D[c]<--->(1)g3p[c]+(1)s7p[c],tktA or tktB
+S7P_R5P_TKT,TKT1,transketolase,(1)r5p[c]+(1)xu5p-D[c]<--->(1)g3p[c]+(1)s7p[c],tktA or tktB
+F6P_GAP_TAL,TALA,transaldolase,(1)g3p[c]+(1)s7p[c]<--->(1)e4p[c]+(1)f6p[c],talB or talA
+S7P_E4P_TAL,TALA,transaldolase,(1)g3p[c]+(1)s7p[c]<--->(1)e4p[c]+(1)f6p[c],talB or talA
+FBP,FBP,fructose-bisphosphatase,(1)fdp[c]+(1)h2o[c]--->(1)f6p[c]+(1)pi[c],fbp or glpX or yggF or yidA
+PPC,PPC,phosphoenolpyruvate carboxylase,(1)co2[c]+(1)h2o[c]+(1)pep[c]--->(1)h[c]+(1)oaa[c]+(1)pi[c],ppc
+PCK,PPCK,phosphoenolpyruvate carboxykinase,(1)atp[c]+(1)oaa[c]--->(1)adp[c]+(1)co2[c]+(1)pep[c],pck
+PPS,PPS,phosphoenolpyruvate synthase,(1)atp[c]+(1)h2o[c]+(1)pyr[c]--->(1)amp[c]+(2)h[c]+(1)pep[c]+(1)pi[c],ppsA
+MAD,ME1,malic enzyme (NAD),(1)mal-L[c]+(1)nad[c]--->(1)co2[c]+(1)nadh[c]+(1)pyr[c],maeA
+PDH,PDH,pyruvate dehydrogenase,(1)coa[c]+(1)nad[c]+(1)pyr[c]--->(1)accoa[c]+(1)co2[c]+(1)nadh[c],aceF and lpd and aceE
+GLT,CS,citrate synthase,(1)accoa[c]+(1)h2o[c]+(1)oaa[c]--->(1)cit[c]+(1)coa[c]+(1)h[c],gltA
+ACN_1,ACONTa,"aconitase (half-reaction A, Citrate hydro-lyase)",(1)cit[c]<--->(1)acon-C[c]+(1)h2o[c],acnB or acnA
+ACN_2,ACONTb,"aconitase (half-reaction B, Isocitrate hydro-lyase)",(1)acon-C[c]+(1)h2o[c]<--->(1)icit[c],acnB or acnA
+ICD,ICDHyr,isocitrate dehydrogenase (NADP),(1)icit[c]+(1)nadp[c]<--->(1)akg[c]+(1)co2[c]+(1)nadph[c],icd
+LPD,AKGDH,2-Oxogluterate dehydrogenase,(1)akg[c]+(1)coa[c]+(1)nad[c]--->(1)co2[c]+(1)nadh[c]+(1)succoa[c],sucB and lpd and sucA
+SK,SUCOAS,succinyl-CoA synthetase (ADP-forming),(1)atp[c]+(1)coa[c]+(1)succ[c]<--->(1)adp[c]+(1)pi[c]+(1)succoa[c],sucD and sucC
+SDH,SUCDi,succinate dehydrogenase (irreversible),(1)q8[c]+(1)succ[c]--->(1)fum[c]+(1)q8h2[c],sdhC and sdhD and sdhA and sdhB
+FUMA,FUM,fumarase,(1)fum[c]+(1)h2o[c]<--->(1)mal-L[c],fumA or fumB or fumC
+MQO,MDH,malate synthase,(1)mal-L[c]+(1)nad[c]<--->(1)h[c]+(1)nadh[c]+(1)oaa[c],mdh
+MDH,MDH,malate synthase,(1)mal-L[c]+(1)nad[c]<--->(1)h[c]+(1)nadh[c]+(1)oaa[c],mdh
+ACEA,ICL,Isocitrate lyase,(1)icit[c]--->(1)glx[c]+(1)succ[c],aceA
+ACEB,MALS,malate synthase,(1)accoa[c]+(1)glx[c]+(1)h2o[c]--->(1)coa[c]+(1)h[c]+(1)mal-L[c],aceB or glcB
+ACEK_1,NA,,ATP + icd ↔ ADP + icdP,aceK
+ACEK_2,NA,,icdP ↔ icd + P,aceK
+EDD,EDD,6-phosphogluconate dehydratase,[c] : 6pgc --> 2ddg6p + h2o,edd
+EDA,EDA,2-dehydro-3-deoxy-phosphogluconate aldolase,[c] : 2ddg6p --> g3p + pyr,eda
+NADH_req,,,,
+PNT_req,,,,
+ADK,ADK1,adenylate kinase,(1)amp[c]+(1)atp[c]<--->(2)adp[c],adk
+ATP_syn,,,,
+CYA,ADNCYC,,ATP ↔ cAMP + 2 * P,cyaA
+DOS,PDE,,cAMP ↔ AMP,dosP or cpdA
+ACK,ACKr,acetate kinase,(1)ac[c]+(1)atp[c]<--->(1)actp[c]+(1)adp[c],ackA or purT or tdcD
+ACS,ACS,acetyl-CoA synthetase,[c] : ac + atp + coa --> accoa + amp + ppi,acs
+PTA,PTAr,phosphotransacetylase,(1)accoa[c]+(1)pi[c]<--->(1)actp[c]+(1)coa[c],pta or eutD
+PTS_0,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+PTS_1,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+PTS_2,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+PTS_3,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+PTS_4,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+GLC_feed,,,,
+CYTBO,CYTBO3_4pp,,2 * QH2+ 8 * H+cyt+ O2↔ 2 * Q+ 8 * H+per+ 2 * H2O,cyoA and cyoB and cyoD and cyoC
+SQR_,NA,,FADH2+ Q ↔ FAD + QH2,
+NDHII,NADH5,,h_c + nadh_c + q8_c → nad_c + q8h2_c,wrbA or chrR or ndh or kefF
+GROWTH,,,,
+ATP_MAINTENANCE,,,,
+XCH_GLC,EX_glc(e),D-Glucose exchange,(1)glc-D[e]<--->,NA
+PIT,Pit2rpp,,(1)h[e]+(1)pi[e]<--->(1)h[c]+(1)pi[c],NA
+XCH_P,,,,
+XCH_ACE1,ACtex,,,
+_ACE_OUT,,,,
+XCH_ACE2,ACtex,,,
+GL6P_HYDROLYSIS,,,,

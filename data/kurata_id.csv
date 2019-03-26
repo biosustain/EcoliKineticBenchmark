@@ -1,0 +1,160 @@
+ID,BiGG ID,Enzyme,Reaction equation,Gene name
+vgrowth,NA,,,
+vPts1,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+vPts4,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+vPts4_medium,GLCptspp,composed of glucose transport via diffusion (extracellular to periplasm) and D-glucoseMaltotriose transport via diffusion (extracellular to periplasm) irreversible and D-glucose transport via PEP:Pyr PTS (periplasm),(1)glc-D[e]+(1)pep[c]--->(1)g6p[c]+(1)pyr[c],(malX and ptsH and crr and ptsI) or (ptsG and ptsI and ptsH and crr) or (manZ and ptsH and manY and manX and ptsI) or lamB or phoE or ompF or ompN or ompC 
+vNonpts,GLCtex,,,
+vNonpts_medium,GLCtex,,,
+vE_Glk,HEX1,Hexokinase (D-glucose:ATP),atp_c + glc__D_c → adp_c + g6p_c + h_c,glk
+vE_Pgi,PGI,glucose-6-phosphate isomerase,(1)g6p[c]<--->(1)f6p[c],pgi
+vE_Pfk,PFK,phosphofructokinase,(1)atp[c]+(1)f6p[c]--->(1)adp[c]+(1)fdp[c]+(1)h[c],pfkA or pfkB
+vE_Fbp,FBP,fructose-bisphosphatase,(1)fdp[c]+(1)h2o[c]--->(1)f6p[c]+(1)pi[c],fbp or glpX or yggF or yidA
+vE_Fba,FBA,fructose-bisphosphate aldolase,(1)fdp[c]<--->(1)dhap[c]+(1)g3p[c],fbaA or fbaB
+vE_Gapdh,GAPD,glyceraldehyde-3-phosphate dehydrogenase,(1)g3p[c]+(1)nad[c]+(1)pi[c]<--->(1)13dpg[c]+(1)h[c]+(1)nadh[c],gapA
+vE_Gapdh,TPI,triose-phosphate isomerase,(1)dhap[c]<--->(1)g3p[c],tpiA
+vE_Gapdh,PGM,phosphoglycerate mutase,(1)2pg[c]<--->(1)3pg[c],gpmA or gpmM
+vE_Gapdh,ENO,enolase,(1)2pg[c]<--->(1)h2o[c]+(1)pep[c],eno
+vE_Gapdh,PGK,phosphoglycerate kinase,(1)3pg[c]+(1)atp[c]<--->(1)13dpg[c]+(1)adp[c],pgk
+vE_Pyk,PYK,pyruvate kinase,(1)adp[c]+(1)h[c]+(1)pep[c]--->(1)atp[c]+(1)pyr[c],pykA or pykF
+vE_Pps,PPS,phosphoenolpyruvate synthase,(1)atp[c]+(1)h2o[c]+(1)pyr[c]--->(1)amp[c]+(2)h[c]+(1)pep[c]+(1)pi[c],ppsA
+vE_Pdh,PDH,pyruvate dehydrogenase,(1)coa[c]+(1)nad[c]+(1)pyr[c]--->(1)accoa[c]+(1)co2[c]+(1)nadh[c],aceF and lpd and aceE
+vE_Pta,PTAr,phosphotransacetylase,(1)accoa[c]+(1)pi[c]<--->(1)actp[c]+(1)coa[c],pta or eutD
+vE_Ack,ACKr,acetate kinase,(1)ac[c]+(1)atp[c]<--->(1)actp[c]+(1)adp[c],ackA or purT or tdcD
+vE_Ack_medium,EX_ac(e),Acetate exchange,(1)ac[e]<--->,NA
+vE_Acs,ACS,acetyl-CoA synthetase,[c] : ac + atp + coa --> accoa + amp + ppi,acs
+vE_Acs_medium,ACS,acetyl-CoA synthetase,[c] : ac + atp + coa --> accoa + amp + ppi,acs
+vE_Cs,CS,citrate synthase,(1)accoa[c]+(1)h2o[c]+(1)oaa[c]--->(1)cit[c]+(1)coa[c]+(1)h[c],gltA
+vE_Icdh,ICDHyr,isocitrate dehydrogenase (NADP),(1)icit[c]+(1)nadp[c]<--->(1)akg[c]+(1)co2[c]+(1)nadph[c],icd
+vE_akgdh,AKGDH,2-Oxogluterate dehydrogenase,(1)akg[c]+(1)coa[c]+(1)nad[c]--->(1)co2[c]+(1)nadh[c]+(1)succoa[c],sucB and lpd and sucA
+vE_Sdh,SUCDi,succinate dehydrogenase (irreversible),(1)q8[c]+(1)succ[c]--->(1)fum[c]+(1)q8h2[c],sdhC and sdhD and sdhA and sdhB
+vE_Fum,FUM,fumarase,(1)fum[c]+(1)h2o[c]<--->(1)mal-L[c],fumA or fumB or fumC
+vE_Mdh,MDH,malate synthase,(1)mal-L[c]+(1)nad[c]<--->(1)h[c]+(1)nadh[c]+(1)oaa[c],mdh
+vE_MaeB,ME2,malic enzyme (NADP),(1)mal-L[c]+(1)nadp[c]--->(1)co2[c]+(1)nadph[c]+(1)pyr[c],maeB
+vE_Pck,PPCK,phosphoenolpyruvate carboxykinase,(1)atp[c]+(1)oaa[c]--->(1)adp[c]+(1)co2[c]+(1)pep[c],pck
+vE_Ppc,PPC,phosphoenolpyruvate carboxylase,(1)co2[c]+(1)h2o[c]+(1)pep[c]--->(1)h[c]+(1)oaa[c]+(1)pi[c],ppc
+vE_Icl,ICL,Isocitrate lyase,(1)icit[c]--->(1)glx[c]+(1)succ[c],aceA
+vE_Ms,MALS,malate synthase,(1)accoa[c]+(1)glx[c]+(1)h2o[c]--->(1)coa[c]+(1)h[c]+(1)mal-L[c],aceB or glcB
+vE_AceKki,NA,,ATP + icd ↔ ADP + icdP,aceK
+vE_AceKph,NA,,icdP ↔ icd + P,aceK
+vE_G6pdh,G6PDH2r,glucose 6-phosphate dehydrogenase,(1)g6p[c]+(1)nadp[c]<--->(1)6pgl[c]+(1)h[c]+(1)nadph[c],zwf
+vE_Pgl,PGL,6-phosphogluconolactonase,(1)6pgl[c]+(1)h2o[c]--->(1)6pgc[c]+(1)h[c],pgl
+vE_Edd,EDD,6-phosphogluconate dehydratase,[c] : 6pgc --> 2ddg6p + h2o,edd
+vE_Eda,EDA,2-dehydro-3-deoxy-phosphogluconate aldolase,[c] : 2ddg6p --> g3p + pyr,eda
+vE_6Pgdh,GND,phosphogluconate dehydrogenase,(1)6pgc[c]+(1)nadp[c]--->(1)co2[c]+(1)nadph[c]+(1)ru5p-D[c],gnd
+vE_R5pi,RPI,ribose-5-phosphate isomerase,(1)r5p[c]<--->(1)ru5p-D[c],rpiA or rpiB
+vE_Rpe,RPE,ribulose 5-phosphate 3-epimerase,(1)ru5p-D[c]<--->(1)xu5p-D[c],rpe
+vE_Tkt1,TKT1,transketolase,(1)r5p[c]+(1)xu5p-D[c]<--->(1)g3p[c]+(1)s7p[c],tktA or tktB
+vE_Tkt2,TKT2,transketolase,(1)e4p[c]+(1)xu5p-D[c]<--->(1)f6p[c]+(1)g3p[c],tktA or tktB
+vE_Tal,TALA,transaldolase,(1)g3p[c]+(1)s7p[c]<--->(1)e4p[c]+(1)f6p[c],talB or talA
+vE_Cya,ADNCYC,,ATP ↔ cAMP + 2 * P,cyaA
+vE_cAMPdegr,PDE1,"3',5'-cyclic-nucleotide phosphodiesterase",camp_c + h2o_c → amp_c + h_c,dosP or cpdA
+vG_glk,NA,,Synthesis of enzyme,
+vG_pfkA,NA,,Synthesis of enzyme pfkA,
+vG_fbp,NA,,Synthesis of enzyme fbp,
+vG_fbaA,NA,,,
+vG_gapA,NA,,,
+vG_pykF,NA,,,
+vG_ppsA,NA,,,
+vG_lpd,NA,,,
+vG_acs,NA,,,
+vG_gltA,NA,,,
+vG_icdA,NA,,,
+vG_sucAB,NA,,,
+vG_sdhCDAB,NA,,,
+vG_fumABC,NA,,,
+vG_mdh,NA,,,
+vG_maeB,NA,,,
+vG_pckA,NA,,,
+vG_ppc,NA,,,
+vG_aceA,NA,,,
+vG_aceB,NA,,,
+vG_aceK,NA,,Synthesis of ezyme aceK,
+vD_X,NA,,Dilution rate,
+vD_GLCfeed,NA,,,
+vD_GLCex,NA,,,
+vD_GLC,NA,,Dilution due to growth of GLC,
+vD_G6P,NA,,Dilution due to growth of G6P,
+vD_F6P,NA,,,
+vD_FBP,NA,,,
+vD_GAP,NA,,,
+vD_PEP,NA,,,
+vD_PYR,NA,,,
+vD_AcCoA,NA,,,
+vD_AcP,NA,,,
+vD_ACEex,NA,,,
+vD_ICIT,NA,,,
+vD_aKG,NA,,,
+vD_SUC,NA,,,
+vD_FUM,NA,,,
+vD_MAL,NA,,,
+vD_OAA,NA,,,
+vD_GOX,NA,,,
+vD_6PGL,NA,,,
+vD_6PG,NA,,,
+vD_KDPG,NA,,,
+vD_RU5P,NA,,,
+vD_R5P,NA,,,
+vD_X5P,NA,,,
+vD_S7P,NA,,,
+vD_E4P,NA,,,
+vD_cAMP,NA,,,
+vD_Glk,NA,,Dilution due to growth and degradation of Glk,
+vD_Pfk,NA,,,
+vD_Fbp,NA,,,
+vD_Fba,NA,,,
+vD_Gapdh,NA,,,
+vD_Pyk,NA,,,
+vD_Pps,NA,,,
+vD_Pdh,NA,,,
+vD_Acs,NA,,,
+vD_Cs,NA,,,
+vD_Icdh,NA,,,
+vD_IcdhP,NA,,,
+vD_akgdh,NA,,,
+vD_Sdh,NA,,,
+vD_Fum,NA,,,
+vD_Mdh,NA,,,
+vD_MaeB,NA,,,
+vD_Pck,NA,,,
+vD_Ppc,NA,,,
+vD_Icl,NA,,,
+vD_Ms,NA,,,
+vD_AceK,NA,,,
+vBM_G6P,NA,,Biomass requirement,
+vBM_F6P,NA,,,
+vBM_GAP,NA,,,
+vBM_PEP,NA,,,
+vBM_PYR,NA,,,
+vBM_AcCoA,NA,,,
+vBM_aKG,NA,,,
+vBM_SUC,NA,,,
+vBM_FUM,NA,,,
+vBM_OAA,NA,,,
+vBM_R5P,NA,,,
+vBM_E4P,NA,,,
+alphaGLC,NA,,ancillary value,
+alphaACE,NA,,,
+H,NA,,,
+EIIA,NA,,,
+CrpcAMP,NA,,,
+Crp,NA,,,
+CraFBP,NA,,,
+Cra,NA,,,
+PdhRPYR,NA,,,
+PdhR,NA,,,
+OP_NADH,NA,,,
+OP_FADH2,NA,,,
+vATP,NA,,,
+mu,NA,,,
+A,NA,,kinetic parameters returned with the fluxes,
+B,NA,,,
+vSdh1_max,NA,,,
+vSdh2_max,NA,,,
+vFum1_max,NA,,,
+vFum2_max,NA,,,
+vMdh1_max,NA,,,
+vMdh2_max,NA,,,
+QEdd_pH,NA,,,
+QEda_pH,NA,,,
+SS_MaeB,NA,,,
+SS_Ppc,NA,,,
