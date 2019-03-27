@@ -8,6 +8,10 @@ Repository contains:
 4) Set of notebooks to orchestrate simulations and analysis of results - `notebooks/`.
 5) Additional files that are dictionaries to convert IDs from model specific ones to the BiGG IDs.
 
+## Additional links
+Models overview and scope - [Here](https://docs.google.com/spreadsheets/d/1AabFcblykcDXuCHVakR9OE9DLRcwop4-ajbPAx--nSI/edit?usp=sharing)
+Data collection - [Here](https://docs.google.com/spreadsheets/d/1P_F2AuiC-Hcu-Z4hUZIyO9lj60QOr3mtdfIW9VuNxqs/edit?usp=sharing)
+
 ## Instructions
 Most of the tasks should be started from the notebooks titled `Run Sensitivity experiments` and `Run KO experiment`.
 COBRA simulation is currently being done from the notebook `COBRA Simulation`.
