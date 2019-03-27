@@ -13,9 +13,11 @@ Most of the tasks should be started from the notebooks titled `Run Sensitivity e
 COBRA simulation is currently being done from the notebook `COBRA Simulation`.
 
 ## Requirements
-`python > 3.5`
-`tellurium > 2.0`
-`pandas > 0.20`
-`numpy > 1.14`
-`altair > 2.1`
-`cobrapy > 0.14`
+```
+python > 3.5
+tellurium > 2.0
+pandas > 0.20
+numpy > 1.14
+altair > 2.1
+cobrapy > 0.14
+```
