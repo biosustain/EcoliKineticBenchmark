@@ -243,6 +243,19 @@ def relative_error(df, exp_name = None, measurement_type = "normalized_flux", th
     new_df = new_df[["author", "flux", "normalized_flux", "relative_error"]]
     return new_df
 
+def calculate_norm(x, exp_data):
+    """
+    Calculate ||x - exp_data || / ||exp_data|| in such way that NAs are discarded in both numerator and denominator
+    Params:
+    :x - pd.Series of measurement_type that was declared in normalized_error 
+    :exp_data - pd.Sereis of experimental data with the same measurement_type    
+    """    
+    diff = x - exp_data
+    nonna_ids = diff[~diff.isna()].index
+    value = np.linalg.norm(diff.loc[nonna_ids]) / np.linalg.norm(exp_data.loc[nonna_ids])
+    return value
+
+
 def normalized_error(df, exp_name = None, measurement_type = "normalized_flux", threshold = 1000):
     """
     Calculate relative error in percentages compared with experimental dataset. 
@@ -261,8 +274,10 @@ def normalized_error(df, exp_name = None, measurement_type = "normalized_flux", 
 
     # find the error estimate tgat is norm of (vexp - vsim) / norm of vexp. 
     # https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003580    
-    diff = df.groupby("author").apply(lambda x: np.linalg.norm((exp_values - x[measurement_type]).dropna()) / np.linalg.norm(exp_values))
     
+    #diff = df.groupby("author").apply(lambda x: np.linalg.norm((exp_values - x[measurement_type]).dropna()) / np.linalg.norm(exp_values))
+    diff = df.groupby("author").apply(lambda x: calculate_norm(x = x[measurement_type], exp_data = exp_values))
+
     return diff
 
 # Set of routines to load data for various models 
@@ -275,6 +290,11 @@ def load_khodayari(sample_names, load_path, id_df, files = None):
     - flux with correspoding value in original units
     - ID showing original id
     - BiGG ID with BiGG identifier
+    params:
+    :sample_names - list of sample names or "all"
+    :load_path - Path object where the samples are located
+    :id_df - pd.DataFrame with conversion Model ID -> BiGG ID
+    :files - dict where key is sample name and value is filename
     """
 
     if files is None:
@@ -327,6 +347,11 @@ def load_kurata(sample_names, load_path, id_df, files = None):
     - sample_id corresponding to relevant sample
     - flux with correspoding value in original units
     - ID with BiGG identifier
+    params:
+    :sample_names - list of sample names or "all"
+    :load_path - Path object where the samples are located
+    :id_df - pd.DataFrame with conversion Model ID -> BiGG ID
+    :files - dict where key is sample name and value is filename
       """
     if files is None:
         raise ValueError("files dictionary is not specified")
@@ -394,6 +419,11 @@ def load_millard(sample_names, load_path, id_df, files = None):
     - sample_id corresponding to relevant sample
     - flux with correspoding value in original units
     - ID with BiGG identifier
+    params:
+    :sample_names - list of sample names or "all"
+    :load_path - Path object where the samples are located
+    :id_df - pd.DataFrame with conversion Model ID -> BiGG ID
+    :files - dict where key is sample name and value is filename
       """
     if files is None:
         raise ValueError("files dictionary is not specified")
@@ -452,6 +482,11 @@ def load_kotte(sample_names, load_path, id_df, files = None):
     - sample_id corresponding to relevant sample
     - flux with correspoding value in original units
     - ID with BiGG identifier
+    params:
+    :sample_names - list of sample names or "all"
+    :load_path - Path object where the samples are located
+    :id_df - pd.DataFrame with conversion Model ID -> BiGG ID
+    :files - dict where key is sample name and value is filename
       """
     if files is None:
         raise ValueError("files dictionary is not specified")
@@ -498,6 +533,11 @@ def load_chassagnole(sample_names, load_path, id_df, files = None):
     - sample_id corresponding to relevant sample
     - flux with correspoding value in original units
     - ID with BiGG identifier
+    params:
+    :sample_names - list of sample names or "all"
+    :load_path - Path object where the samples are located
+    :id_df - pd.DataFrame with conversion Model ID -> BiGG ID
+    :files - dict where key is sample name and value is filename
       """
     if files is None:
         raise ValueError("files dictionary is not specified")
