@@ -681,6 +681,9 @@ end
 if continuous_flg == 6
     D = 0.25;
 end
+if continuous_flg == 7
+    D = 0.6;
+end
 
 
 %%

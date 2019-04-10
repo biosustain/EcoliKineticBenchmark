@@ -215,6 +215,10 @@ def get_millard_eno():
         samples = ["eno(0)", "eno(50)", "eno(200)", "eno(500)", "WT"]
         return {k:f"millard_eno_sens_{k}.csv" for k in samples}
 
+def get_kurata_dilutions():
+    samples = ["0.2", "0.4", "0.6", "0.7"]
+    return {k:f"kurata_dilution_{k.replace('.','')}.mat" for k in samples}
+
 def relative_error(df, exp_name = None, measurement_type = "normalized_flux", threshold = 1000):
     """
     Calculate relative error in percentages compared with experimental dataset. 
