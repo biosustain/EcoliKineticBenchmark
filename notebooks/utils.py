@@ -219,6 +219,14 @@ def get_kurata_dilutions():
     samples = ["0.2", "0.4", "0.6", "0.7"]
     return {k:f"kurata_dilution_{k.replace('.','')}.mat" for k in samples}
 
+def get_khodayari_dilutions():
+    samples = ["0.2", "0.4", "0.6", "0.7"]
+    return {k:f"khodayari_dilution_{k.replace('.','')}.mat" for k in samples}
+
+def get_millard_dilutions():
+    samples = ["0.2", "0.4", "0.6", "0.7"]
+    return {k:f"millard_dilution_{k.replace('.','')}.csv" for k in samples}    
+
 def relative_error(df, exp_name = None, measurement_type = "normalized_flux", threshold = 1000):
     """
     Calculate relative error in percentages compared with experimental dataset. 
