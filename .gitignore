@@ -3,6 +3,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.Rhistory
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -38,3 +39,11 @@ dmypy.json
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+#Project specific parts
+data/models/modified_files/Kurata_continuous/*.mat
+data/models/modified_files/Khodayari/*.mat
+data/models/original_files/*
+notebooks/old/*
+figures/*
+data/datasets/*
