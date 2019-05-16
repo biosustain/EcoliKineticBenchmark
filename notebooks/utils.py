@@ -229,7 +229,7 @@ def get_millard_dilutions():
 
 def relative_error(df, exp_name = None, measurement_type = "normalized_flux", threshold = 1000):
     """
-    Calculate relative error in percentages compared with experimental dataset. 
+    Calculate relative error (mean absolute percentage error) compared with experimental dataset. 
     Supposed to be applied while grouping by BiGG_ID and sample_id.
     Example - all_data.groupby(["BiGG_ID", "sample_id"]).apply(relative_error, exp_name="Nicolas").reset_index().drop("level_2", axis = 1)
     Params:
