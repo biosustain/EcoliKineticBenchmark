@@ -56,7 +56,7 @@ def process_data(data, author):
 
 def relative_errors(xdata, author=None):
     """
-    Calculates error metrics. Supposed to be run after check_data
+    Calculates error metrics. Supposed to be run after process_data
     """
     xdf = xdata
     abs_flux = xdf.flux

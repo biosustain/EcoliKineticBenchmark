@@ -373,6 +373,15 @@ def load_khodayari(sample_names, load_path, id_df, files=None):
         )
         df = df.assign(author="Khodayari", sample_id=sample_id)
 
+        # fix PGM direction
+        df.loc[df["ID"] == "PGM", "flux"] = -1*df.loc[df["ID"] == "PGM", "flux"].values[0]
+        
+        # fix PGK direction
+        df.loc[df["ID"] == "PGK", "flux"] = -1*df.loc[df["ID"] == "PGK", "flux"].values[0]
+
+        # fix RPI direction
+        df.loc[df["ID"] == "RPI", "flux"] = -1*df.loc[df["ID"] == "RPI", "flux"].values[0]
+
         # normalize to the glucose uptake
         glucose_uptake = df[df["ID"] == "EX_glc(e)"]["flux"].values[0]
         df = df.assign(normalized_flux=lambda x: x.flux * 100 / glucose_uptake)
