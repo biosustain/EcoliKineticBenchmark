@@ -65,7 +65,7 @@ def relative_errors(xdata, author=None):
     exp_flux = xdf.sel(author=author).normalized_flux
 
     # Mean absolute percent error (MAPE)
-    xdf["relative_error"] = abs(nm_flux - exp_flux) / abs(nm_flux) * 100
+    xdf["relative_error"] = abs(nm_flux - exp_flux) / abs(exp_flux) * 100
     # If either predicted OR original are zeros then error is 100%
     xdf["relative_error"] = xdf["relative_error"].where(
         ((nm_flux != 0) & (exp_flux != 0)), 100

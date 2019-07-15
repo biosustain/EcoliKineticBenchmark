@@ -150,8 +150,24 @@ def _load_cobra_ko_sims():
     exp_ecc_results = pd.read_csv(
         path_to_results / "COBRA" / "Exp_ECC2" / "knockouts_all.csv", index_col=0
     )
+    
+    df = pd.concat([iml_results, exp_iml_results])
+    # Fix direction to match experimental data
+    # Only for iML1515
+    # fix PGM direction
+    df.loc[df["ID"] == "PGM", "flux"] = -1*df.loc[df["ID"] == "PGM", "flux"].values[0]
+    df.loc[df["ID"] == "PGM", "normalized_flux"] = -1*df.loc[df["ID"] == "PGM", "normalized_flux"].values[0]
+    # fix PGK direction
+    df.loc[df["ID"] == "PGK", "flux"] = -1*df.loc[df["ID"] == "PGK", "flux"].values[0]
+    df.loc[df["ID"] == "PGK", "normalized_flux"] = -1*df.loc[df["ID"] == "PGK", "normalized_flux"].values[0]
 
-    return pd.concat([iml_results, ecc_results, exp_iml_results, exp_ecc_results])
+    df = pd.concat([df, ecc_results, exp_ecc_results])
+    # For both iML1515 and ECC2
+    # fix RPI direction
+    df.loc[df["ID"] == "RPI", "flux"] = -1*df.loc[df["ID"] == "RPI", "flux"].values[0]
+    df.loc[df["ID"] == "RPI", "normalized_flux"] = -1*df.loc[df["ID"] == "RPI", "normalized_flux"].values[0]
+
+    return df
 
 
 def load_ko_data():
