@@ -18,10 +18,10 @@ COBRA simulation is currently being done from the notebook `COBRA Simulation`.
 
 ## Requirements
 ```
-python > 3.5
+python > 3.6
 tellurium > 2.0
-pandas > 0.20
-numpy > 1.14
-altair > 2.1
-cobrapy > 0.14
+pandas > 0.24
+numpy > 1.16
+altair > 3.0
+cobrapy > 0.15
 ```
