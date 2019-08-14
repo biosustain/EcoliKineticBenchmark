@@ -4,7 +4,7 @@ import xarray as xr
 
 
 from pathlib import Path
-from .load import _load_experimental_ko_data
+#from .load import _load_experimental_ko_data
 
 
 # Set up paths
@@ -18,7 +18,6 @@ kurata_idf = pd.read_csv(data_path / "kurata_id.csv")
 chassagnole_idf = pd.read_csv(data_path / "chassagnole_id.csv")
 
 
-
 def _get_common_fluxes(data, author):
     """
     Find such fluxes that are common between all datasets
@@ -30,6 +29,28 @@ def _get_common_fluxes(data, author):
     )
     common_fluxes = {x for x in common_fluxes if pd.notna(x)}
     return common_fluxes
+
+
+def _get_branch_points():
+    return [
+        {"name": "EMP_PPP", "one": "PGI", "two": "G6PDH2r"},  # EMP vs PPP
+        {"name": "PYK_PPC", "one": "PYK", "two": "PPC"},  # Make pyruvate or go to TCA
+        {
+            "name": "TCA_ACE",
+            "one": "CS",
+            "two": "PTAr",
+        },  # Use AcCoA for TCA or to Execrete acetate
+        {
+            "name": "ICD_ICL",
+            "one": "ICDHyr",
+            "two": "ICL",
+        },  # Go straight for TCA or use glyoxylate shunt
+        {
+            "name": "MDH_ME",
+            "one": "MDH",
+            "two": "ME1",
+        },  # Continue TCA or use Malic enzyme
+    ]
 
 
 def process_data(data, author):
@@ -112,4 +133,24 @@ def summary_errors(xdata, author=None):
     return xr.Dataset(
         data_vars={"normalized_error": x_norm_error, "unnormalized_error": diff_norm}
     )
+
+
+def branch_stat(xdf):
+    # Supposed to be called after processing
+    branch_list = []
+    for branch in _get_branch_points():
+        try:
+            one = xdf.sel(BiGG_ID=branch["one"]).normalized_flux
+            two = xdf.sel(BiGG_ID=branch["two"]).normalized_flux
+            calc = one / (one + two)
+            calc = (
+                calc.assign_coords(Branch=branch["name"])
+                .drop("BiGG_ID")
+                .rename("percentage")
+            )
+            branch_list.append(calc)
+        except KeyError:
+            print(f"No data for branch point {branch['name']}")
+
+    return xr.concat(branch_list, dim="Branch")
 

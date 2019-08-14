@@ -75,13 +75,13 @@ def get_khodayari_kos():
         "pgi": "result_cont_Delta_pgi.mat",
         "pgl": "result_cont_Delta_pgl.mat",
         "ppsA": "result_cont_Delta_ppsA.mat",
-        "pts": "result_cont_Delta_pts.mat",
+        #"pts": "result_cont_Delta_pts.mat",
         "pykA": "result_cont_Delta_pykA.mat",
         "pykF": "result_cont_Delta_pykF.mat",
         "rpe": "result_cont_Delta_rpe.mat",
         "rpiA": "result_cont_Delta_rpiAB.mat",
         "rpiB": "result_cont_Delta_rpiAB.mat",
-        "sdhCD": "result_cont_Delta_sdhCD.mat",
+        #"sdhCD": "result_cont_Delta_sdhCD.mat",
         "sucA": "result_cont_Delta_sucAB.mat",
         "talA": "result_cont_Delta_talAB.mat",
         "tktA": "result_cont_Delta_tktAB.mat",
@@ -94,16 +94,16 @@ def get_khodayari_kos():
 
 def get_millard_kos():
     return {
-        "fbaA": "Millard_result_Delta_fba.csv",
-        "fbaB": "Millard_result_Delta_fba.csv",
+        #"fbaA": "Millard_result_Delta_fba.csv",
+        #"fbaB": "Millard_result_Delta_fba.csv",
         "fbp": "Millard_result_Delta_fbp.csv",
         "gnd": "Millard_result_Delta_gnd.csv",
-        "pfkA": "Millard_result_Delta_pfk.csv",
-        "pfkB": "Millard_result_Delta_pfk.csv",
+        #"pfkA": "Millard_result_Delta_pfk.csv",
+        #"pfkB": "Millard_result_Delta_pfk.csv",
         "pgi": "Millard_result_Delta_pgi.csv",
         "pgl": "Millard_result_Delta_pgl.csv",
         "ppsA": "Millard_result_Delta_pps.csv",
-        "pts": "Millard_result_Delta_pts.csv",
+        #"pts": "Millard_result_Delta_pts.csv",
         "pykA": "Millard_result_Delta_pyk.csv",
         "pykF": "Millard_result_Delta_pyk.csv",
         "rpe": "Millard_result_Delta_rpe.csv",
@@ -111,11 +111,11 @@ def get_millard_kos():
         "rpiB": "Millard_result_Delta_rpi.csv",
         "sdhCD": "Millard_result_Delta_sdh.csv",
         "talAB": "Millard_result_Delta_tal.csv",
-        "tkt1": "Millard_result_Delta_tkt1.csv",
-        "tkt2": "Millard_result_Delta_tkt2.csv",
-        "tpi": "Millard_result_Delta_tpi.csv",
+        "tktA": "Millard_result_Delta_tkt1.csv",
+        #"tkt2": "Millard_result_Delta_tkt2.csv",
+        #"tpi": "Millard_result_Delta_tpi.csv",
         "zwf": "Millard_result_Delta_zwf.csv",
-        "sucA": "Millard_result_Delta_aAkgdh.csv",
+        #"sucA": "Millard_result_Delta_aAkgdh.csv",
         "WT": "Millard_result_WT.csv",
     }
 
@@ -126,17 +126,17 @@ def get_kurata_kos():
         "fbaB": "result_cont_Delta_fbaB.mat",
         "fbp": "result_cont_Delta_fbp.mat",
         "gnd": "result_cont_Delta_gnd.mat",
-        "gpmA": "result_cont_Delta_gpmA.mat",
+        #"gpmA": "result_cont_Delta_gpmA.mat",
         "pfkA": "result_cont_Delta_pfkA.mat",
         "pfkB": "result_cont_Delta_pfkB.mat",
         "pgi": "result_cont_Delta_pgi.mat",
         "ppc": "result_cont_Delta_ppc.mat",
-        "pgl": "result_cont_Delta_pgl.mat",
+        #"pgl": "result_cont_Delta_pgl.mat",
         "ppsA": "result_cont_Delta_ppsA.mat",
         "pts": "result_cont_Delta_pts.mat",
         "pykA": "result_cont_Delta_pykA.mat",
         "pykF": "result_cont_Delta_pykF.mat",
-        "rpe": "result_cont_Delta_rpe.mat",
+        #"rpe": "result_cont_Delta_rpe.mat",
         "rpiA": "result_cont_Delta_rpiA.mat",
         "rpiB": "result_cont_Delta_rpiB.mat",
         "sdhCD": "result_cont_Delta_sdhC.mat",
@@ -151,6 +151,37 @@ def get_kurata_kos():
         "WT": "result_cont_WT.mat",
     }
 
+
+def get_kurata_batch_kos():
+    return {
+        "fbaA": "result_batch_Delta_fbaB.mat",
+        #"fbaB": "result_batch_Delta_fbaB.mat",
+        "fbp": "result_batch_Delta_fbp.mat",
+        "gnd": "result_batch_Delta_gnd.mat",
+        #"gpmA": "result_batch_Delta_gpmA.mat",
+        "pfkA": "result_batch_Delta_pfkA.mat",
+        "pfkB": "result_batch_Delta_pfkB.mat",
+        "pgi": "result_batch_Delta_pgi.mat",
+        "ppc": "result_batch_Delta_ppc.mat",
+        #"pgl": "result_batch_Delta_pgl.mat",
+        "ppsA": "result_batch_Delta_ppsA.mat",
+        "pts": "result_batch_Delta_pts.mat",
+        "pykA": "result_batch_Delta_pykA.mat",
+        "pykF": "result_batch_Delta_pykF.mat",
+        #"rpe": "result_batch_Delta_rpe.mat",
+        "rpiA": "result_batch_Delta_rpiA.mat",
+        "rpiB": "result_batch_Delta_rpiB.mat",
+        "sdhCD": "result_batch_Delta_sdhC.mat",
+        "sucA": "result_batch_Delta_sucAC.mat",
+        "talA": "result_batch_Delta_talA.mat",
+        "talB": "result_batch_Delta_talB.mat",
+        "tktA": "result_batch_Delta_tktA.mat",
+        "tktB": "result_batch_Delta_tktB.mat",
+        "tpi": "result_batch_Delta_tpi.mat",
+        "zwf": "result_batch_Delta_zwf.mat",
+        "glk": "result_batch_Delta_glk.mat",
+    }
+      
 
 def get_kotte_kos():
     return {
@@ -392,7 +423,7 @@ def load_khodayari(sample_names, load_path, id_df, files=None):
     return res_df
 
 
-def load_kurata(sample_names, load_path, id_df, files=None):
+def load_kurata(sample_names, load_path, id_df, files=None, mode="continuous"):
     """ Will return single dataframe with columns:
     - author=Kurata, 
     - sample_id corresponding to relevant sample
@@ -433,9 +464,15 @@ def load_kurata(sample_names, load_path, id_df, files=None):
         # resulting id would be GAPD.
         kurata_ids = id_df[["ID", "BiGG ID"]].drop_duplicates(subset="ID")
 
+        if mode == "continuous":
+            flux_index = 2100 
+        elif mode == "batch":
+            # 5 hour sampling time for batch
+            flux_index = 101+10*5
+
         df = pd.DataFrame(
             {
-                "flux": data["FLUX"][2100,],
+                "flux": data["FLUX"][flux_index,],
                 "ID": kurata_ids["ID"].values,
                 "BiGG_ID": kurata_ids["BiGG ID"].values,
             }
