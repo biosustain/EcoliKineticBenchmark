@@ -78,6 +78,14 @@ switch i
     case 18
         sample_id = 'Delta_tpi';
         enzyme_id = 87;
+        
+    case 19
+        sample_id = 'Delta_eda';
+        enzyme_id = 89;
+        
+    case 20
+        sample_id = 'Delta_edd';
+        enzyme_id = 90;
 end
 
 fprintf('Working on %s\n',sample_id)

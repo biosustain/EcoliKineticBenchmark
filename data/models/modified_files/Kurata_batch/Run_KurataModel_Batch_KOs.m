@@ -10,9 +10,9 @@ ode_file = @KurataModel_ODE;
 flux_file = @KurataModel_Flux;
 
 continuous_flg = 0;
-span = -10:0.1:12;
+span = -10:0.1:12; 
 
-for i= 1:1:29
+for i= [1:1:29, 40, 41]
     
     y0 = getInitialCondition();
     y0( 1) = 0.011;        % X
@@ -158,6 +158,16 @@ for i= 1:1:29
         % Delta tpi
         SampleID = 'Delta_tpi';
         strain_no = 29;
+        
+        case 40
+        % Delta eda
+        SampleID = 'Delta_eda';
+        strain_no = 40;
+        
+        case 41
+        % Delta edd
+        SampleID = 'Delta_edd';
+        strain_no = 41;
     end
 
 

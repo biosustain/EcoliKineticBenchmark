@@ -651,6 +651,16 @@ if strain_no == 39
     kGapdh_cat = kGapdh_cat * 3.1;
 end
 
+% delta eda
+if strain_no == 40
+    vEda_max = 0;
+end
+
+% delta edd
+if strain_no == 41
+    vEdd_max = 0;
+end
+
 %% Batch culture
 if continuous_flg == 0
     GLCfeed = 0;
