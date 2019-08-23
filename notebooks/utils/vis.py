@@ -6,7 +6,6 @@ import altair as alt
 from altair.expr import datum
 
 
-
 def heatmap(xdf, author=None, sample_id=None):
     """
     Function to create relative error heatmaps showing missing values as grey, 
@@ -50,8 +49,26 @@ def heatmap(xdf, author=None, sample_id=None):
 
 
 def _get_colors():
-    domain = ["Khodayari", "Millard", "Kurata", "iML1515", "ECC2", "Exp_iML1515", "Exp_ECC2", "Long"]
-    range_ = ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02", "#a6761d", "#666666"]
+    domain = [
+        "Khodayari",
+        "Millard",
+        "Kurata",
+        "iML1515",
+        "Chassagnole",
+        "Exp_iML1515",
+        "Exp_ECC2",
+        "Long",
+    ]
+    range_ = [
+        "#1b9e77",
+        "#d95f02",
+        "#7570b3",
+        "#e7298a",
+        "#66a61e",
+        "#e6ab02",
+        "#a6761d",
+        "#666666",
+    ]
     return domain, range_
 
 
@@ -100,7 +117,14 @@ def summary_chart(norm_error, author=None, title=None, sort_list=None):
     return chart
 
 
-def jitter_summary_chart(norm_error, author=None, title=None, sort_list=None, opacity=False, color_scheme="category10"):
+def jitter_summary_chart(
+    norm_error,
+    author=None,
+    title=None,
+    sort_list=None,
+    opacity=False,
+    color_scheme="category10",
+):
     source = norm_error.to_dataframe().reset_index()
     if type(author) == list:
         source = source.query(f"author not in @author")
@@ -117,7 +141,7 @@ def jitter_summary_chart(norm_error, author=None, title=None, sort_list=None, op
 
     # modify that for changes in coloring. Make sure that domain is correct
     domain, range_ = _get_colors()
-    
+
     stripplot = (
         alt.Chart(source, width=100, height=600)
         .mark_circle()
@@ -129,7 +153,9 @@ def jitter_summary_chart(norm_error, author=None, title=None, sort_list=None, op
                 scale=alt.Scale(),
             ),
             y=alt.Y("normalized_error:Q", title="Normalized error"),
-            color=alt.Color("author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)),
+            color=alt.Color(
+                "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
+            ),
             column=alt.Column(
                 "author:N",
                 header=alt.Header(
@@ -160,3 +186,92 @@ def jitter_summary_chart(norm_error, author=None, title=None, sort_list=None, op
     return stripplot.configure_axis(
         labelFontSize=20, titleFontSize=20
     ).configure_header(titleFontSize=24)
+
+
+def boxplot(
+    norm_error,
+    author=None,
+    title=None,
+    sort_list=None,
+    opacity=False,
+    color_scheme="category10",
+):
+    source = norm_error.to_dataframe().reset_index()
+    if type(author) == list:
+        source = source.query(f"author not in @author")
+    elif type(author) == str:
+        source = source.query(f"author != '{author}'")
+
+    selector = alt.selection_single(empty="none", fields=["sample_id"])
+    if opacity:
+        opacity = alt.condition(selector, alt.OpacityValue(1.0), alt.OpacityValue(0.5))
+    else:
+        opacity = alt.OpacityValue(1.0)
+
+    size = alt.condition(selector, alt.SizeValue(150), alt.SizeValue(60))
+
+    # modify that for changes in coloring. Make sure that domain is correct
+    domain, range_ = _get_colors()
+
+    stripplot = (
+        alt.Chart(width=100, height=600)
+        .mark_circle()
+        .encode(
+            x=alt.X(
+                "jitter:Q",
+                title=None,
+                axis=alt.Axis(values=[0], ticks=True, grid=False, labels=False),
+                scale=alt.Scale(),
+            ),
+            y=alt.Y("normalized_error:Q", title="Normalized error"),
+            color=alt.Color(
+                "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
+            ),
+            size=size,
+            opacity=opacity,
+            tooltip=["author", "sample_id", "normalized_error"],
+        )
+        .add_selection(selector)
+    )
+
+    boxplot = (
+        alt.Chart()
+        .mark_boxplot(size=95)
+        .encode(
+            y=alt.Y("normalized_error:Q", title="Normalized error"),
+            color=alt.Color(
+                "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
+            ),
+            opacity=alt.OpacityValue(0.7),
+        )
+    )
+
+    layer = (
+        alt.layer(boxplot, stripplot, data=source)
+        .transform_calculate(
+            # Generate Gaussian jitter with a Box-Muller transform
+            jitter="sqrt(-2*log(random()))*cos(2*PI*random())"
+        )
+        .facet(
+            column=alt.Column(
+                "author:N",
+                header=alt.Header(
+                    labelAngle=-90,
+                    titleOrient="top",
+                    labelOrient="bottom",
+                    labelAlign="right",
+                    labelPadding=3,
+                    labelFontSize=20,
+                    title=title,
+                ),
+                sort=sort_list,
+            )
+        )
+        .configure_facet(spacing=5)
+        .configure_view(stroke=None)
+        .transform_filter("datum.normalized_error !== null")
+    )
+
+    return layer.configure_axis(labelFontSize=20, titleFontSize=20).configure_header(
+        titleFontSize=24
+    )

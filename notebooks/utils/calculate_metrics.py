@@ -4,7 +4,8 @@ import xarray as xr
 
 
 from pathlib import Path
-#from .load import _load_experimental_ko_data
+
+# from .load import _load_experimental_ko_data
 
 
 # Set up paths
@@ -72,6 +73,31 @@ def process_data(data, author):
         abs(xdf.normalized_flux) > 1e-1, 0.0
     )
     xdf["normalized_flux"] = xdf.normalized_flux.where(~abs_flux.isnull(), np.NaN)
+
+    # each unpredicted flux is set to zero
+    if "Chassagnole" in xdf.author:
+        chassagnole = xdf.sel(dict(author="Chassagnole"))
+        # find sample ids where not all fluxes are NaNs
+        ch = chassagnole.groupby("sample_id").apply(lambda x: x.flux.isnull().all())
+        xdf["flux"].loc[
+            dict(author="Chassagnole", sample_id=ch.where(~ch, drop=True).sample_id)
+        ] = (
+            xdf["flux"]
+            .loc[
+                dict(author="Chassagnole", sample_id=ch.where(~ch, drop=True).sample_id)
+            ]
+            .fillna(0.0)
+        )
+        xdf["normalized_flux"].loc[
+            dict(author="Chassagnole", sample_id=ch.where(~ch, drop=True).sample_id)
+        ] = (
+            xdf["normalized_flux"]
+            .loc[
+                dict(author="Chassagnole", sample_id=ch.where(~ch, drop=True).sample_id)
+            ]
+            .fillna(0.0)
+        )
+
     return xdf
 
 

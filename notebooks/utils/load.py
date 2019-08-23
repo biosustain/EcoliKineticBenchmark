@@ -8,22 +8,28 @@ import io
 
 from .utils import (
     get_khodayari_kos,
+    get_khodayari_batch_kos,
     get_millard_kos,
+    get_millard_batch_kos,
     get_kurata_kos,
     get_kurata_batch_kos,
     get_chassagnole_kos,
     get_khodayari_dilutions,
     get_kurata_dilutions,
     get_millard_dilutions,
+    get_chassagnole_dilutions,
     get_khodayari_zwf,
     get_kurata_zwf,
     get_millard_zwf,
+    get_chassagnole_zwf,
     get_khodayari_pgi,
     get_kurata_pgi,
     get_millard_pgi,
+    get_chassagnole_pgi,
     get_khodayari_eno,
     get_kurata_eno,
     get_millard_eno,
+    get_chassagnole_eno,
     load_khodayari,
     load_kurata,
     load_millard,
@@ -80,43 +86,40 @@ def load_ko_data():
         iml_results = pd.read_csv(
             path_to_results / "COBRA" / "iML1515" / "knockouts_all.csv", index_col=0
         )
-        ecc_results = pd.read_csv(
-            path_to_results / "COBRA" / "ECC2" / "knockouts_all.csv", index_col=0
-        )
+        # ecc_results = pd.read_csv(
+        #     path_to_results / "COBRA" / "ECC2" / "knockouts_all.csv", index_col=0
+        # )
 
         exp_iml_results = pd.read_csv(
             path_to_results / "COBRA" / "Exp_iML1515" / "knockouts_all.csv", index_col=0
         )
-        exp_ecc_results = pd.read_csv(
-            path_to_results / "COBRA" / "Exp_ECC2" / "knockouts_all.csv", index_col=0
-        )
+        # exp_ecc_results = pd.read_csv(
+        #     path_to_results / "COBRA" / "Exp_ECC2" / "knockouts_all.csv", index_col=0
+        # )
 
         df = pd.concat([iml_results, exp_iml_results])
         # Fix direction to match experimental data
         # Only for iML1515
         # fix PGM direction
-        df.loc[df["ID"] == "PGM", "flux"] = (
-            -1 * df.loc[df["ID"] == "PGM", "flux"].values[0]
+        
+        iml_reversed = ["PGM", "PGK", "SUCOAS"]
+        
+        df.loc[df["ID"].isin(iml_reversed), "flux"] = (
+            -1 * df.loc[df["ID"].isin(iml_reversed), "flux"]
         )
-        df.loc[df["ID"] == "PGM", "normalized_flux"] = (
-            -1 * df.loc[df["ID"] == "PGM", "normalized_flux"].values[0]
-        )
-        # fix PGK direction
-        df.loc[df["ID"] == "PGK", "flux"] = (
-            -1 * df.loc[df["ID"] == "PGK", "flux"].values[0]
-        )
-        df.loc[df["ID"] == "PGK", "normalized_flux"] = (
-            -1 * df.loc[df["ID"] == "PGK", "normalized_flux"].values[0]
+        df.loc[df["ID"].isin(iml_reversed), "normalized_flux"] = (
+            -1 * df.loc[df["ID"].isin(iml_reversed), "normalized_flux"]
         )
 
-        df = pd.concat([df, ecc_results, exp_ecc_results])
+        # df = pd.concat([df, ecc_results, exp_ecc_results])
         # For both iML1515 and ECC2
         # fix RPI direction
-        df.loc[df["ID"] == "RPI", "flux"] = (
-            -1 * df.loc[df["ID"] == "RPI", "flux"].values[0]
+        ecc_reversed = ["RPI"]
+        df.loc[df["ID"].isin(ecc_reversed), "flux"] = (
+            -1 * df.loc[df["ID"].isin(ecc_reversed), "flux"]
         )
-        df.loc[df["ID"] == "RPI", "normalized_flux"] = (
-            -1 * df.loc[df["ID"] == "RPI", "normalized_flux"].values[0]
+        df.loc[df["ID"].isin(ecc_reversed), "normalized_flux"] = (
+            -1 * df.loc[df["ID"].isin(ecc_reversed), "normalized_flux"]
         )
 
         return df
@@ -146,15 +149,15 @@ def load_ko_data():
             files=get_millard_kos(),
         )
 
-        # chassagnole_results = load_chassagnole(
-        #     sample_names="all",
-        #     load_path=(path_to_results / "Chassagnole"),
-        #     id_df=chassagnole_idf,
-        #     files=get_chassagnole_kos(),
-        # )
+        chassagnole_results = load_chassagnole(
+            sample_names="all",
+            load_path=(path_to_results / "Chassagnole" / "chemostat_knockouts"),
+            id_df=chassagnole_idf,
+            files=get_chassagnole_kos(),
+        )
 
         simulation_results = pd.concat(
-            [khodayari_results, kurata_results, millard_results], sort=False
+            [khodayari_results, kurata_results, millard_results, chassagnole_results], sort=False
         )
         return simulation_results
 
@@ -174,36 +177,32 @@ def load_dilution_data():
         iml_results = pd.read_csv(
             path_to_results / "COBRA" / "iML1515" / "dilutions" / "all.csv", index_col=0
         )
-        ecc_results = pd.read_csv(
-            path_to_results / "COBRA" / "ECC2" / "dilutions" / "all.csv", index_col=0
-        )
+        # ecc_results = pd.read_csv(
+        #     path_to_results / "COBRA" / "ECC2" / "dilutions" / "all.csv", index_col=0
+        # )
 
         df = iml_results
         # Fix direction to match experimental data
         # Only for iML1515
         # fix PGM direction
-        df.loc[df["ID"] == "PGM", "flux"] = (
-            -1 * df.loc[df["ID"] == "PGM", "flux"].values[0]
+        iml_reversed = ["PGM", "PGK", "SUCOAS"]
+        
+        df.loc[df["ID"].isin(iml_reversed), "flux"] = (
+            -1 * df.loc[df["ID"].isin(iml_reversed), "flux"]
         )
-        df.loc[df["ID"] == "PGM", "normalized_flux"] = (
-            -1 * df.loc[df["ID"] == "PGM", "normalized_flux"].values[0]
-        )
-        # fix PGK direction
-        df.loc[df["ID"] == "PGK", "flux"] = (
-            -1 * df.loc[df["ID"] == "PGK", "flux"].values[0]
-        )
-        df.loc[df["ID"] == "PGK", "normalized_flux"] = (
-            -1 * df.loc[df["ID"] == "PGK", "normalized_flux"].values[0]
+        df.loc[df["ID"].isin(iml_reversed), "normalized_flux"] = (
+            -1 * df.loc[df["ID"].isin(iml_reversed), "normalized_flux"]
         )
 
-        df = pd.concat([df, ecc_results])
+        # df = pd.concat([df, ecc_results])
         # For both iML1515 and ECC2
         # fix RPI direction
-        df.loc[df["ID"] == "RPI", "flux"] = (
-            -1 * df.loc[df["ID"] == "RPI", "flux"].values[0]
+        ecc_reversed = ["RPI"]
+        df.loc[df["ID"].isin(ecc_reversed), "flux"] = (
+            -1 * df.loc[df["ID"].isin(ecc_reversed), "flux"]
         )
-        df.loc[df["ID"] == "RPI", "normalized_flux"] = (
-            -1 * df.loc[df["ID"] == "RPI", "normalized_flux"].values[0]
+        df.loc[df["ID"].isin(ecc_reversed), "normalized_flux"] = (
+            -1 * df.loc[df["ID"].isin(ecc_reversed), "normalized_flux"]
         )
 
         return df
@@ -264,7 +263,14 @@ def load_dilution_data():
             id_df=millard_idf,
             files=get_millard_dilutions(),
         )
-        return pd.concat([khodayari_dil, kurata_dil, millard_dil], sort=False)
+
+        chassagnole_dil = load_chassagnole(
+            sample_names="all",
+            load_path=(path_to_results / "Chassagnole" / "dilutions"),
+            id_df=chassagnole_idf,
+            files=get_chassagnole_dilutions(),
+        )
+        return pd.concat([khodayari_dil, kurata_dil, millard_dil, chassagnole_dil], sort=False)
 
     with io.StringIO() as buf, redirect_stdout(buf):
         simulation_data = _load_kinetic_dilution_sims()
@@ -330,10 +336,28 @@ def load_sensitivity_data():
             id_df=millard_idf,
             files=get_millard_eno(),
         )
+        chassagnole_zwf = load_chassagnole(
+            sample_names="all",
+            load_path=(path_to_results / "Chassagnole" / "zwf_pgi_eno_sensitivity"),
+            id_df=chassagnole_idf,
+            files=get_chassagnole_zwf(),
+        )
+        chassagnole_pgi = load_chassagnole(
+            sample_names="all",
+            load_path=(path_to_results / "Chassagnole" / "zwf_pgi_eno_sensitivity"),
+            id_df=chassagnole_idf,
+            files=get_chassagnole_pgi(),
+        )
+        chassagnole_eno = load_chassagnole(
+            sample_names="all",
+            load_path=(path_to_results / "Chassagnole" / "zwf_pgi_eno_sensitivity"),
+            id_df=chassagnole_idf,
+            files=get_chassagnole_eno(),
+        )
 
-        simulation_zwf = pd.concat([khodayari_zwf, kurata_zwf, millard_zwf], sort=False)
-        simulation_pgi = pd.concat([khodayari_pgi, kurata_pgi, millard_pgi], sort=False)
-        simulation_eno = pd.concat([khodayari_eno, kurata_eno, millard_eno], sort=False)
+        simulation_zwf = pd.concat([khodayari_zwf, kurata_zwf, millard_zwf, chassagnole_zwf], sort=False)
+        simulation_pgi = pd.concat([khodayari_pgi, kurata_pgi, millard_pgi, chassagnole_pgi], sort=False)
+        simulation_eno = pd.concat([khodayari_eno, kurata_eno, millard_eno, chassagnole_eno], sort=False)
         return (simulation_zwf, simulation_pgi, simulation_eno)
 
     def _load_experimental_sensitivity_data():
@@ -461,7 +485,7 @@ def load_batch_ko_data():
             sample_names="all",
             load_path=(path_to_results / "Khodayari"),
             id_df=khod_idf,
-            files=get_khodayari_kos(),
+            files=get_khodayari_batch_kos(),
         )
 
         kurata_results = load_kurata(
@@ -476,11 +500,18 @@ def load_batch_ko_data():
             sample_names="all",
             load_path=(path_to_results / "Millard" / "batch_knockouts"),
             id_df=millard_idf,
-            files=get_millard_kos(),
+            files=get_millard_batch_kos(),
+        )
+
+        chassagnole_results = load_chassagnole(
+            sample_names="all",
+            load_path=(path_to_results / "Chassagnole" / "batch_knockouts"),
+            id_df=chassagnole_idf,
+            files=get_chassagnole_kos(),
         )
 
         simulation_results = pd.concat(
-            [khodayari_results, kurata_results, millard_results], sort=False
+            [khodayari_results, kurata_results, millard_results, chassagnole_results], sort=False
         )
         return simulation_results
 
@@ -496,14 +527,14 @@ def load_batch_ko_data():
             / "knockouts_all.csv",
             index_col=0,
         )
-        ecc_results = pd.read_csv(
-            path_to_results
-            / "COBRA"
-            / "ECC2"
-            / "batch_knockouts"
-            / "knockouts_all.csv",
-            index_col=0,
-        )
+        # ecc_results = pd.read_csv(
+        #     path_to_results
+        #     / "COBRA"
+        #     / "ECC2"
+        #     / "batch_knockouts"
+        #     / "knockouts_all.csv",
+        #     index_col=0,
+        # )
 
         exp_iml_results = pd.read_csv(
             path_to_results
@@ -513,14 +544,14 @@ def load_batch_ko_data():
             / "knockouts_all.csv",
             index_col=0,
         )
-        exp_ecc_results = pd.read_csv(
-            path_to_results
-            / "COBRA"
-            / "Exp_ECC2"
-            / "batch_knockouts"
-            / "knockouts_all.csv",
-            index_col=0,
-        )
+        # exp_ecc_results = pd.read_csv(
+        #     path_to_results
+        #     / "COBRA"
+        #     / "Exp_ECC2"
+        #     / "batch_knockouts"
+        #     / "knockouts_all.csv",
+        #     index_col=0,
+        # )
 
         df = pd.concat([iml_results, exp_iml_results])
         # Fix direction to match experimental data
@@ -534,7 +565,7 @@ def load_batch_ko_data():
             -1 * df.loc[df["ID"].isin(iml_reversed), "normalized_flux"]
         )
 
-        df = pd.concat([df, ecc_results, exp_ecc_results])
+        # df = pd.concat([df, ecc_results, exp_ecc_results])
         # For both iML1515 and ECC2
         # fix RPI direction
         ecc_reversed = ["RPI"]

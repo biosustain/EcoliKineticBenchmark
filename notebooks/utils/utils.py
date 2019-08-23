@@ -75,13 +75,13 @@ def get_khodayari_kos():
         "pgi": "result_cont_Delta_pgi.mat",
         "pgl": "result_cont_Delta_pgl.mat",
         "ppsA": "result_cont_Delta_ppsA.mat",
-        #"pts": "result_cont_Delta_pts.mat",
+        # "pts": "result_cont_Delta_pts.mat",
         "pykA": "result_cont_Delta_pykA.mat",
         "pykF": "result_cont_Delta_pykF.mat",
         "rpe": "result_cont_Delta_rpe.mat",
         "rpiA": "result_cont_Delta_rpiAB.mat",
         "rpiB": "result_cont_Delta_rpiAB.mat",
-        #"sdhCD": "result_cont_Delta_sdhCD.mat",
+        # "sdhCD": "result_cont_Delta_sdhCD.mat",
         "sucA": "result_cont_Delta_sucAB.mat",
         "talA": "result_cont_Delta_talAB.mat",
         "tktA": "result_cont_Delta_tktAB.mat",
@@ -92,18 +92,48 @@ def get_khodayari_kos():
     }
 
 
+def get_khodayari_batch_kos():
+    return {
+        "fbaA": "result_cont_Delta_fbaAB.mat",
+        "fbaB": "result_cont_Delta_fbaAB.mat",
+        "fbp": "result_cont_Delta_fbp.mat",
+        "gnd": "result_cont_Delta_gnd.mat",
+        "pfkA": "result_cont_Delta_pfkAB.mat",
+        "pfkB": "result_cont_Delta_pfkAB.mat",
+        "pgi": "result_cont_Delta_pgi.mat",
+        "pgl": "result_cont_Delta_pgl.mat",
+        "ppsA": "result_cont_Delta_ppsA.mat",
+        # "pts": "result_cont_Delta_pts.mat",
+        "pykA": "result_cont_Delta_pykA.mat",
+        "pykF": "result_cont_Delta_pykF.mat",
+        "rpe": "result_cont_Delta_rpe.mat",
+        "rpiA": "result_cont_Delta_rpiAB.mat",
+        "rpiB": "result_cont_Delta_rpiAB.mat",
+        # "sdhCD": "result_cont_Delta_sdhCD.mat",
+        "sucA": "result_cont_Delta_sucAB.mat",
+        "talA": "result_cont_Delta_talAB.mat",
+        "tktA": "result_cont_Delta_tktAB.mat",
+        "tktB": "result_cont_Delta_tktAB.mat",
+        "tpi": "result_cont_Delta_tpi.mat",
+        "zwf": "result_cont_Delta_zwf.mat",
+        "WT": "result_cont_WT.mat",
+        "eda": "result_cont_Delta_eda.mat",
+        "edd": "result_cont_Delta_edd.mat",
+    }
+
+
 def get_millard_kos():
     return {
-        #"fbaA": "Millard_result_Delta_fba.csv",
-        #"fbaB": "Millard_result_Delta_fba.csv",
+        # "fbaA": "Millard_result_Delta_fba.csv",
+        # "fbaB": "Millard_result_Delta_fba.csv",
         "fbp": "Millard_result_Delta_fbp.csv",
         "gnd": "Millard_result_Delta_gnd.csv",
-        #"pfkA": "Millard_result_Delta_pfk.csv",
-        #"pfkB": "Millard_result_Delta_pfk.csv",
+        # "pfkA": "Millard_result_Delta_pfk.csv",
+        # "pfkB": "Millard_result_Delta_pfk.csv",
         "pgi": "Millard_result_Delta_pgi.csv",
         "pgl": "Millard_result_Delta_pgl.csv",
         "ppsA": "Millard_result_Delta_pps.csv",
-        #"pts": "Millard_result_Delta_pts.csv",
+        # "pts": "Millard_result_Delta_pts.csv",
         "pykA": "Millard_result_Delta_pyk.csv",
         "pykF": "Millard_result_Delta_pyk.csv",
         "rpe": "Millard_result_Delta_rpe.csv",
@@ -112,11 +142,41 @@ def get_millard_kos():
         "sdhCD": "Millard_result_Delta_sdh.csv",
         "talAB": "Millard_result_Delta_tal.csv",
         "tktA": "Millard_result_Delta_tkt1.csv",
-        #"tkt2": "Millard_result_Delta_tkt2.csv",
-        #"tpi": "Millard_result_Delta_tpi.csv",
+        # "tkt2": "Millard_result_Delta_tkt2.csv",
+        # "tpi": "Millard_result_Delta_tpi.csv",
         "zwf": "Millard_result_Delta_zwf.csv",
-        #"sucA": "Millard_result_Delta_aAkgdh.csv",
+        # "sucA": "Millard_result_Delta_aAkgdh.csv",
         "WT": "Millard_result_WT.csv",
+    }
+
+
+def get_millard_batch_kos():
+    return {
+        # "fbaA": "Millard_result_Delta_fba.csv",
+        # "fbaB": "Millard_result_Delta_fba.csv",
+        "fbp": "Millard_result_Delta_fbp.csv",
+        "gnd": "Millard_result_Delta_gnd.csv",
+        # "pfkA": "Millard_result_Delta_pfk.csv",
+        # "pfkB": "Millard_result_Delta_pfk.csv",
+        "pgi": "Millard_result_Delta_pgi.csv",
+        "pgl": "Millard_result_Delta_pgl.csv",
+        "ppsA": "Millard_result_Delta_pps.csv",
+        # "pts": "Millard_result_Delta_pts.csv",
+        "pykA": "Millard_result_Delta_pyk.csv",
+        "pykF": "Millard_result_Delta_pyk.csv",
+        "rpe": "Millard_result_Delta_rpe.csv",
+        "rpiA": "Millard_result_Delta_rpi.csv",
+        "rpiB": "Millard_result_Delta_rpi.csv",
+        "sdhCD": "Millard_result_Delta_sdh.csv",
+        "talAB": "Millard_result_Delta_tal.csv",
+        "tktA": "Millard_result_Delta_tkt1.csv",
+        # "tkt2": "Millard_result_Delta_tkt2.csv",
+        # "tpi": "Millard_result_Delta_tpi.csv",
+        "zwf": "Millard_result_Delta_zwf.csv",
+        # "sucA": "Millard_result_Delta_aAkgdh.csv",
+        "WT": "Millard_result_WT.csv",
+        "eda": "Millard_result_Delta_eda.csv",
+        "edd": "Millard_result_Delta_edd.csv",
     }
 
 
@@ -126,17 +186,17 @@ def get_kurata_kos():
         "fbaB": "result_cont_Delta_fbaB.mat",
         "fbp": "result_cont_Delta_fbp.mat",
         "gnd": "result_cont_Delta_gnd.mat",
-        #"gpmA": "result_cont_Delta_gpmA.mat",
+        # "gpmA": "result_cont_Delta_gpmA.mat",
         "pfkA": "result_cont_Delta_pfkA.mat",
         "pfkB": "result_cont_Delta_pfkB.mat",
         "pgi": "result_cont_Delta_pgi.mat",
         "ppc": "result_cont_Delta_ppc.mat",
-        #"pgl": "result_cont_Delta_pgl.mat",
+        # "pgl": "result_cont_Delta_pgl.mat",
         "ppsA": "result_cont_Delta_ppsA.mat",
         "pts": "result_cont_Delta_pts.mat",
         "pykA": "result_cont_Delta_pykA.mat",
         "pykF": "result_cont_Delta_pykF.mat",
-        #"rpe": "result_cont_Delta_rpe.mat",
+        # "rpe": "result_cont_Delta_rpe.mat",
         "rpiA": "result_cont_Delta_rpiA.mat",
         "rpiB": "result_cont_Delta_rpiB.mat",
         "sdhCD": "result_cont_Delta_sdhC.mat",
@@ -155,20 +215,20 @@ def get_kurata_kos():
 def get_kurata_batch_kos():
     return {
         "fbaA": "result_batch_Delta_fbaB.mat",
-        #"fbaB": "result_batch_Delta_fbaB.mat",
+        # "fbaB": "result_batch_Delta_fbaB.mat",
         "fbp": "result_batch_Delta_fbp.mat",
         "gnd": "result_batch_Delta_gnd.mat",
-        #"gpmA": "result_batch_Delta_gpmA.mat",
+        # "gpmA": "result_batch_Delta_gpmA.mat",
         "pfkA": "result_batch_Delta_pfkA.mat",
         "pfkB": "result_batch_Delta_pfkB.mat",
         "pgi": "result_batch_Delta_pgi.mat",
         "ppc": "result_batch_Delta_ppc.mat",
-        #"pgl": "result_batch_Delta_pgl.mat",
+        # "pgl": "result_batch_Delta_pgl.mat",
         "ppsA": "result_batch_Delta_ppsA.mat",
         "pts": "result_batch_Delta_pts.mat",
         "pykA": "result_batch_Delta_pykA.mat",
         "pykF": "result_batch_Delta_pykF.mat",
-        #"rpe": "result_batch_Delta_rpe.mat",
+        # "rpe": "result_batch_Delta_rpe.mat",
         "rpiA": "result_batch_Delta_rpiA.mat",
         "rpiB": "result_batch_Delta_rpiB.mat",
         "sdhCD": "result_batch_Delta_sdhC.mat",
@@ -180,8 +240,10 @@ def get_kurata_batch_kos():
         "tpi": "result_batch_Delta_tpi.mat",
         "zwf": "result_batch_Delta_zwf.mat",
         "glk": "result_batch_Delta_glk.mat",
+        "eda": "result_batch_Delta_eda.mat",
+        "edd": "result_batch_Delta_edd.mat",
     }
-      
+
 
 def get_kotte_kos():
     return {
@@ -203,7 +265,8 @@ def get_chassagnole_kos():
         "pfkB": "Chassagnole_result_Delta_pfk.csv",
         "pgi": "Chassagnole_result_Delta_pgi.csv",
         # "pts": "Chassagnole_result_Delta_pts.csv",
-        "pykAF": "Chassagnole_result_Delta_pyk.csv",
+        "pykA": "Chassagnole_result_Delta_pyk.csv",
+        "pykF": "Chassagnole_result_Delta_pyk.csv",
         "rpe": "Chassagnole_result_Delta_rpe.csv",
         "rpiA": "Chassagnole_result_Delta_rpi.csv",
         "rpiB": "Chassagnole_result_Delta_rpi.csv",
@@ -261,6 +324,27 @@ def get_millard_eno():
     return {k: f"millard_eno_sens_{k}.csv" for k in samples}
 
 
+def get_chassagnole_zwf():
+    samples = ["dzwf", "zwf(15)"]
+    files = {k: f"chassagnole_{k}.csv" for k in samples}
+    files["WT"] = "chassagnole_sens_WT.csv"
+    return files
+
+
+def get_chassagnole_pgi():
+    samples = ["dpgi", "pgi(0)", "pgi(20)", "pgi(50)", "pgi(100)"]
+    files = {k: f"chassagnole_{k}.csv" for k in samples}
+    files["WT"] = "chassagnole_sens_WT.csv"
+    return files
+
+
+def get_chassagnole_eno():
+    samples = ["eno(0)", "eno(50)", "eno(200)", "eno(500)"]
+    files = {k: f"chassagnole_{k}.csv" for k in samples}
+    files["WT"] = "chassagnole_sens_WT.csv"
+    return files
+
+
 def get_kurata_dilutions():
     samples = ["0.2", "0.4", "0.6", "0.7"]
     return {k: f"kurata_dilution_{k.replace('.','')}.mat" for k in samples}
@@ -276,80 +360,9 @@ def get_millard_dilutions():
     return {k: f"millard_dilution_{k.replace('.','')}.csv" for k in samples}
 
 
-def relative_error(
-    df, exp_name=None, measurement_type="normalized_flux", threshold=1000
-):
-    """
-    Calculate relative error (mean absolute percentage error) compared with experimental dataset. 
-    Supposed to be applied while grouping by BiGG_ID and sample_id.
-    Example - all_data.groupby(["BiGG_ID", "sample_id"]).apply(relative_error, exp_name="Nicolas").reset_index().drop("level_2", axis = 1)
-    Params:
-    :df - group that would be passed by lambda
-    :exp_name - value of "author" column that would be chosen as experimental data to be compared against
-    :measurement_type - string that specifies on which kind of values to compute relative error
-    :threshold - value that would be the maximum possible error
-    """
-    # find the experimental value
-    if exp_name is None:
-        raise ValueError("please specify the name of experimental dataset")
-    exp_value = df.loc[df["author"] == exp_name, measurement_type].values[0]
-    if np.isnan(exp_value):
-        exp_value = 0.0
-    value = abs(abs(df[measurement_type] - exp_value) / df[measurement_type]) * 100
-
-    # Check for errors which are more than threshold and change them to :trim_value
-    if threshold is not None:
-        value.loc[value > threshold] = threshold
-
-    # create new column for relative error
-    new_df = df.assign(relative_error=value)
-    new_df = new_df[["author", "flux", "normalized_flux", "relative_error"]]
-    return new_df
-
-
-def calculate_norm(x, exp_data):
-    """
-    Calculate ||x - exp_data || / ||exp_data|| in such way that NAs are discarded in both numerator and denominator
-    Params:
-    :x - pd.Series of measurement_type that was declared in normalized_error 
-    :exp_data - pd.Sereis of experimental data with the same measurement_type    
-    """
-    diff = x - exp_data
-    nonna_ids = diff[~diff.isna()].index
-    value = np.linalg.norm(diff.loc[nonna_ids]) / np.linalg.norm(
-        exp_data.loc[nonna_ids]
-    )
-    return value
-
-
-def normalized_error(
-    df, exp_name=None, measurement_type="normalized_flux", threshold=1000
-):
-    """
-    Calculate relative error in percentages compared with experimental dataset. 
-    Supposed to be applied while grouping by BiGG_ID and sample_id.
-    Example - selected_data.groupby(["sample_id"]).apply(normalized_error, exp_name="Ishii").reset_index()
-    Params:
-    :df - group that would be passed by lambda
-    :exp_name - value of "author" column that would be chosen as experimental data to be compared against
-    :measurement_type - string that specifies on which kind of values to compute normalized error
-    """
-    # find the experimental value
-    df = df.set_index("BiGG_ID")
-    if exp_name is None:
-        raise ValueError("please specify the name of experimental dataset")
-    exp_values = df.loc[df["author"] == exp_name, measurement_type]
-
-    # find the error estimate tgat is norm of (vexp - vsim) / norm of vexp.
-    # https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003580
-
-    # diff = df.groupby("author").apply(lambda x: np.linalg.norm((exp_values - x[measurement_type]).dropna()) / np.linalg.norm(exp_values))
-    diff = df.groupby("author").apply(
-        lambda x: calculate_norm(x=x[measurement_type], exp_data=exp_values)
-    )
-
-    return diff
-
+def get_chassagnole_dilutions():
+    samples = ["0.2", "0.4", "0.6", "0.7"]
+    return {k: f"Chassagnole_result_{k.replace('.','')}.csv" for k in samples}
 
 # Set of routines to load data for various models
 # and present them as pandas dataframe
@@ -405,13 +418,19 @@ def load_khodayari(sample_names, load_path, id_df, files=None):
         df = df.assign(author="Khodayari", sample_id=sample_id)
 
         # fix PGM direction
-        df.loc[df["ID"] == "PGM", "flux"] = -1*df.loc[df["ID"] == "PGM", "flux"].values[0]
-        
+        df.loc[df["ID"] == "PGM", "flux"] = (
+            -1 * df.loc[df["ID"] == "PGM", "flux"].values[0]
+        )
+
         # fix PGK direction
-        df.loc[df["ID"] == "PGK", "flux"] = -1*df.loc[df["ID"] == "PGK", "flux"].values[0]
+        df.loc[df["ID"] == "PGK", "flux"] = (
+            -1 * df.loc[df["ID"] == "PGK", "flux"].values[0]
+        )
 
         # fix RPI direction
-        df.loc[df["ID"] == "RPI", "flux"] = -1*df.loc[df["ID"] == "RPI", "flux"].values[0]
+        df.loc[df["ID"] == "RPI", "flux"] = (
+            -1 * df.loc[df["ID"] == "RPI", "flux"].values[0]
+        )
 
         # normalize to the glucose uptake
         glucose_uptake = df[df["ID"] == "EX_glc(e)"]["flux"].values[0]
@@ -465,10 +484,10 @@ def load_kurata(sample_names, load_path, id_df, files=None, mode="continuous"):
         kurata_ids = id_df[["ID", "BiGG ID"]].drop_duplicates(subset="ID")
 
         if mode == "continuous":
-            flux_index = 2100 
+            flux_index = 2100
         elif mode == "batch":
             # 5 hour sampling time for batch
-            flux_index = 101+10*5
+            flux_index = 101 + 10 * 5
 
         df = pd.DataFrame(
             {
@@ -624,7 +643,7 @@ def load_kotte(sample_names, load_path, id_df, files=None):
 
 def load_chassagnole(sample_names, load_path, id_df, files=None):
     """ Will return single dataframe with columns:
-    - author=Millard, 
+    - author=Chassagnole, 
     - sample_id corresponding to relevant sample
     - flux with correspoding value in original units
     - ID with BiGG identifier
