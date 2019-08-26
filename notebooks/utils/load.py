@@ -84,14 +84,14 @@ def load_ko_data():
         Load simulations from iML1515, ECC2 and iML1515 and ECC2 conditioned on experimental data
         """
         iml_results = pd.read_csv(
-            path_to_results / "COBRA" / "iML1515" / "knockouts_all.csv", index_col=0
+            path_to_results / "COBRA" / "iML1515" / "chemostat_knockouts" / "knockouts_all.csv", index_col=0
         )
         # ecc_results = pd.read_csv(
         #     path_to_results / "COBRA" / "ECC2" / "knockouts_all.csv", index_col=0
         # )
 
         exp_iml_results = pd.read_csv(
-            path_to_results / "COBRA" / "Exp_iML1515" / "knockouts_all.csv", index_col=0
+            path_to_results / "COBRA" / "Exp_iML1515" / "chemostat_knockouts" / "knockouts_all.csv", index_col=0
         )
         # exp_ecc_results = pd.read_csv(
         #     path_to_results / "COBRA" / "Exp_ECC2" / "knockouts_all.csv", index_col=0
