@@ -19,7 +19,7 @@ kurata_idf = pd.read_csv(data_path / "kurata_id.csv")
 chassagnole_idf = pd.read_csv(data_path / "chassagnole_id.csv")
 
 
-def _get_common_fluxes(data, author):
+def _get_common_fluxes(data, author, include_chassagnole=False):
     """
     Find such fluxes that are common between all datasets
     """
@@ -28,6 +28,8 @@ def _get_common_fluxes(data, author):
         set(kurata_idf["BiGG ID"].unique()),
         set(data.query("author == @author").BiGG_ID.unique()),
     )
+    if include_chassagnole:
+        common_fluxes = common_fluxes.intersection(chassagnole_idf["BiGG ID"].unique())
     common_fluxes = {x for x in common_fluxes if pd.notna(x)}
     return common_fluxes
 
@@ -54,11 +56,15 @@ def _get_branch_points():
     ]
 
 
-def process_data(data, author):
+def process_data(data, author, trim_tca=True):
     """ 
     Subselect and check if the data is alright. Fixes some issues which can lead to numerical troubles.
     """
-    selected_fluxes = _get_common_fluxes(data, author)
+    if trim_tca:
+        selected_fluxes = _get_common_fluxes(data, author)
+    else:
+        selected_fluxes = _get_common_fluxes(data, author, include_chassagnole=True)
+    
     selected_data = (
         data.query("BiGG_ID in @selected_fluxes")
         .groupby(["BiGG_ID", "sample_id", "author"])
@@ -101,11 +107,10 @@ def process_data(data, author):
     return xdf
 
 
-def relative_errors(xdata, author=None):
+def relative_errors(xdf, author=None):
     """
     Calculates error metrics. Supposed to be run after process_data
     """
-    xdf = xdata
     abs_flux = xdf.flux
 
     nm_flux = xdf.normalized_flux
@@ -135,7 +140,7 @@ def summary_errors(xdata, author=None):
     """
     Calculates summary error per each sample_id for each model. Supposed to be run after check_data.
     Returns xarray DataSet with both normalized and non-normalized error.
-    Normalized error is L2norm(pred-exp) divided by
+    Normalized error is L2norm(pred-exp) divided by L2Norm(exp)
     """
 
     def vector_norm(x, dim, ord=None):

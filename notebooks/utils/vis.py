@@ -56,8 +56,6 @@ def _get_colors():
         "iML1515",
         "Chassagnole",
         "Exp_iML1515",
-        "Exp_ECC2",
-        "Long",
     ]
     range_ = [
         "#1b9e77",
@@ -66,55 +64,8 @@ def _get_colors():
         "#e7298a",
         "#66a61e",
         "#e6ab02",
-        "#a6761d",
-        "#666666",
     ]
     return domain, range_
-
-
-def summary_chart(norm_error, author=None, title=None, sort_list=None):
-    """
-    Draws summary chart where one sample is represented by one dot. 
-    Supposed to be used on data where errors are "summarized" 
-    """
-    source = norm_error.to_dataframe().reset_index().query(f"author != '{author}'")
-
-    selector = alt.selection_single(empty="all", fields=["sample_id"])
-    color = alt.condition(
-        selector, alt.Color("author:N", sort=sort_list), alt.ColorValue("lightgray")
-    )
-    opacity = alt.condition(selector, alt.OpacityValue(0.4), alt.OpacityValue(1.0))
-    size = alt.condition(selector, alt.SizeValue(100), alt.SizeValue(40))
-
-    base = (
-        alt.Chart(source, title=title)
-        .mark_circle()
-        .encode(
-            y=alt.Y("normalized_error", title="Normalized error"),
-            tooltip=["author", "sample_id", "normalized_error"],
-            x=alt.X("author", sort=sort_list),
-            size=size,
-            opacity=opacity,
-        )
-    )
-
-    errors = (
-        base.encode(color=color)
-        .add_selection(selector)
-        .transform_filter("datum.normalized_error !== null")
-    )
-
-    # na_vals = base.encode(color=alt.value("lightgrey")).transform_filter("datum.normalized_error === null")
-
-    chart = (
-        errors.properties(width=700, height=600)
-        .configure_axis(labelFontSize=20, titleFontSize=20)
-        .configure_legend(labelFontSize=20, titleFontSize=20)
-        .configure_header(titleFontSize=24)
-        .configure(invalidValues=None)
-    )
-
-    return chart
 
 
 def jitter_summary_chart(
@@ -196,7 +147,7 @@ def boxplot(
     opacity=False,
     color_scheme="category10",
 ):
-    source = norm_error.to_dataframe().reset_index()
+    source = norm_error.to_dataframe().drop_duplicates().reset_index()
     if type(author) == list:
         source = source.query(f"author not in @author")
     elif type(author) == str:
@@ -204,11 +155,11 @@ def boxplot(
 
     selector = alt.selection_single(empty="none", fields=["sample_id"])
     if opacity:
-        opacity = alt.condition(selector, alt.OpacityValue(1.0), alt.OpacityValue(0.5))
+        opacity = alt.condition(selector, alt.OpacityValue(1.0), alt.OpacityValue(0.7))
     else:
         opacity = alt.OpacityValue(1.0)
 
-    size = alt.condition(selector, alt.SizeValue(150), alt.SizeValue(60))
+    size = alt.condition(selector, alt.SizeValue(130), alt.SizeValue(50))
 
     # modify that for changes in coloring. Make sure that domain is correct
     domain, range_ = _get_colors()
@@ -223,7 +174,7 @@ def boxplot(
                 axis=alt.Axis(values=[0], ticks=True, grid=False, labels=False),
                 scale=alt.Scale(),
             ),
-            y=alt.Y("normalized_error:Q", title="Normalized error"),
+            y=alt.Y("normalized_error:Q", title="Normalized error", axis=alt.Axis(tickCount=10)),
             color=alt.Color(
                 "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
             ),
@@ -236,18 +187,45 @@ def boxplot(
 
     boxplot = (
         alt.Chart()
-        .mark_boxplot(size=95)
+        .mark_boxplot(size=95, outliers=False)
         .encode(
             y=alt.Y("normalized_error:Q", title="Normalized error"),
             color=alt.Color(
                 "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
             ),
             opacity=alt.OpacityValue(0.7),
+        )        
+    )
+
+    wt_mark = (
+        alt.Chart().mark_point(size = 180, opacity = 1.0, shape="diamond", filled=True).encode(
+            x=alt.X(
+                "jitter:Q",
+                title=None,
+            ),
+            y=alt.Y("normalized_error:Q", title="Normalized error"),
+            color=alt.Color(
+                "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
+            ),
+            tooltip=["author", "sample_id", "normalized_error"],
         )
+        .transform_filter('datum.sample_id === "WT"')
+    )
+
+    wt_text = (
+        alt.Chart().mark_text(text = "WT", dy=10).encode(
+            x=alt.X(
+                "jitter:Q",
+                title=None,
+            ),
+            y=alt.Y("normalized_error:Q", title="Normalized error"),            
+            tooltip=["author", "sample_id", "normalized_error"],
+        )
+        .transform_filter('datum.sample_id === "WT"')
     )
 
     layer = (
-        alt.layer(boxplot, stripplot, data=source)
+        alt.layer(boxplot, stripplot, wt_mark, wt_text, data=source)
         .transform_calculate(
             # Generate Gaussian jitter with a Box-Muller transform
             jitter="sqrt(-2*log(random()))*cos(2*PI*random())"

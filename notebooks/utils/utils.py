@@ -242,6 +242,7 @@ def get_kurata_batch_kos():
         "glk": "result_batch_Delta_glk.mat",
         "eda": "result_batch_Delta_eda.mat",
         "edd": "result_batch_Delta_edd.mat",
+        "WT" : "result_batch_RF06.mat",
     }
 
 
@@ -276,6 +277,7 @@ def get_chassagnole_kos():
         "tkt2": "Chassagnole_result_Delta_tkt2.csv",
         "tpi": "Chassagnole_result_Delta_tpi.csv",
         "zwf": "Chassagnole_result_Delta_zwf.csv",
+        "WT": "Chassagnole_result_WT.csv",
     }
 
 
