@@ -1,5 +1,5 @@
 # E. coli kinetic model benchmark
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3610129.svg)](https://doi.org/10.5281/zenodo.3610129)
 ## Overview
 Repository contains:
 1) Mathematical models in SBML or Matlab format that can simulate E. coli metabolism - `data/models/*`.
