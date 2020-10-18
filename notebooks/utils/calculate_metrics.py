@@ -128,6 +128,7 @@ def relative_errors(xdf, author=None):
     )
     # Put back NaNs where they were originally
     xdf["relative_error"] = xdf["relative_error"].where(~abs_flux.isnull(), np.NaN)
+    xdf["relative_error"] = xdf["relative_error"].where(~exp_flux.isnull(), np.NaN)
 
     # Calculate symmetric MAPE
     xdf["symm_relative_error"] = (
@@ -185,3 +186,36 @@ def branch_stat(xdf):
 
     return xr.concat(branch_list, dim="Branch")
 
+
+def rms_errors(xdata, author=None):
+    """
+    Calculates RMSE per each sample_id for each model. Supposed to be run after check_data.
+    """
+
+    xdf = xdata
+    nm_flux = xdf.normalized_flux
+    exp_flux = xdf.sel(author=author).normalized_flux
+
+    rse = xr.ufuncs.sqrt(xr.ufuncs.square(nm_flux - exp_flux)).rename("RMSE").mean(dim="BiGG_ID")
+    return rse
+
+
+def spearman_errors(xdata, author=None):
+    from scipy.stats import spearmanr
+    """
+    Calculates Spearman correlation coefficient per each sample_id for each model. Supposed to be run after check_data.
+    """
+
+    def xr_spearman(x,y,dim):
+        def spearman_nop(x,y):
+            r,p = spearmanr(x,y)
+            return r
+        return xr.apply_ufunc(
+            spearman_nop, x, y, input_core_dims=[[dim],[dim]], vectorize=True
+        )
+
+    xdf = xdata
+    nm_flux = xdf.normalized_flux
+    exp_flux = xdf.sel(author=author).normalized_flux
+
+    return xr_spearman(nm_flux,exp_flux, dim="BiGG_ID").rename("SpearmanR")

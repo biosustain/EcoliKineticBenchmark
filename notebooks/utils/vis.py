@@ -45,7 +45,7 @@ def heatmap(xdf, author=None, sample_id=None):
     else:
         chart = base.encode(x=alt.X("sample_id:N"))
 
-    return chart.configure(invalidValues=None)
+    return chart.configure_mark(invalid=None)
 
 
 def _get_colors():
@@ -146,6 +146,8 @@ def boxplot(
     sort_list=None,
     opacity=False,
     color_scheme="category10",
+    field="normalized_error",
+    field_name="Normalized Error"
 ):
     source = norm_error.to_dataframe().drop_duplicates().reset_index()
     if type(author) == list:
@@ -174,13 +176,13 @@ def boxplot(
                 axis=alt.Axis(values=[0], ticks=True, grid=False, labels=False),
                 scale=alt.Scale(),
             ),
-            y=alt.Y("normalized_error:Q", title="Normalized error", axis=alt.Axis(tickCount=10)),
+            y=alt.Y(f"{field}:Q", title=field_name, axis=alt.Axis(tickCount=10)),
             color=alt.Color(
                 "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
             ),
             size=size,
             opacity=opacity,
-            tooltip=["author", "sample_id", "normalized_error"],
+            tooltip=["author", "sample_id", f"{field}"],
         )
         .add_selection(selector)
     )
@@ -189,7 +191,7 @@ def boxplot(
         alt.Chart()
         .mark_boxplot(size=95, outliers=False)
         .encode(
-            y=alt.Y("normalized_error:Q", title="Normalized error"),
+            y=alt.Y(f"{field}:Q", title=field_name),
             color=alt.Color(
                 "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
             ),
@@ -203,11 +205,11 @@ def boxplot(
                 "jitter:Q",
                 title=None,
             ),
-            y=alt.Y("normalized_error:Q", title="Normalized error"),
+            y=alt.Y(f"{field}:Q", title=field_name),
             color=alt.Color(
                 "author:N", legend=None, scale=alt.Scale(domain=domain, range=range_)
             ),
-            tooltip=["author", "sample_id", "normalized_error"],
+            tooltip=["author", "sample_id", f"{field}"],
         )
         .transform_filter('datum.sample_id === "WT"')
     )
@@ -218,8 +220,8 @@ def boxplot(
                 "jitter:Q",
                 title=None,
             ),
-            y=alt.Y("normalized_error:Q", title="Normalized error"),            
-            tooltip=["author", "sample_id", "normalized_error"],
+            y=alt.Y(f"{field}:Q", title=field_name),            
+            tooltip=["author", "sample_id", f"{field}"],
         )
         .transform_filter('datum.sample_id === "WT"')
     )
@@ -247,7 +249,7 @@ def boxplot(
         )
         .configure_facet(spacing=5)
         .configure_view(stroke=None)
-        .transform_filter("datum.normalized_error !== null")
+        .transform_filter(f"datum.{field} !== null")
     )
 
     return layer.configure_axis(labelFontSize=20, titleFontSize=20).configure_header(
